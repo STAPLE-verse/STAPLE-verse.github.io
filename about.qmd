@@ -1,0 +1,5 @@
+---
+title: "About STAPLE"
+---
+
+STAPLE is under development by Erin Buchanan, Marton Kovacs, and others. Inspired by the complexities of metadata, big-team science, and TOP principles, we are designing software for scientists!

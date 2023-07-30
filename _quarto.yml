@@ -1,0 +1,29 @@
+project:
+  type: website
+
+website:
+  title: "STAPLE"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - funding.qmd
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            url:  https://github.com/STAPLE-verse/STAPLE-verse.github.io
+          - text: Report a Bug
+            url: mailto:staple.helpdesk@gmail.com
+  page-footer: 
+    left: "Copyright 2023, Erin Buchanan, Marton Kovacs" 
+
+format:
+  html:
+    theme: lux # lux pulse vapor
+    css: styles.css
+    toc: true
+
+editor: visual
+

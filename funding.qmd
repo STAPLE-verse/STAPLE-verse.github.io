@@ -2,4 +2,26 @@
 title: "Our Funders"
 ---
 
-Information coming soon!
+### NASA
+
+```{r echo = F, fig.align='center', out.width="20%"}
+knitr::include_graphics("https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg")
+```
+
+STAPLE received funding from [NASA](https://www.nasa.gov/) through the [Open Science Initiative](https://science.nasa.gov/open-science-overview) through the [ROSE's program](https://science.nasa.gov/researchers/sara/grant-solicitations) (October 2023-October 2024). This funding allows for the development of the minimal viable product of the open-source project management system proposed by PIs for STAPLE.
+
+### Psychological Science Accelerator
+
+```{r echo = F, fig.align='center', out.width="15%"}
+knitr::include_graphics("https://i0.wp.com/psysciacc.org/wp-content/uploads/2017/10/cropped-cropped-psa.png?fit=512%2C512&ssl=1")
+```
+
+The [Psychological Science Accelerator (PSA)](psysciacc.org) was an inspiration for STAPLE with development help from our members. They have agreed to help fund the user experience and user interface component to designing software, along with support for additional programming.
+
+### Harrisburg University 
+
+```{r echo = F, fig.align='center', out.width="30%"}
+knitr::include_graphics("pics/hu_logo.png")
+```
+
+[Harrisburg University (HU)](https://www.harrisburgu.edu) is a private, non-for-profit STEM-focused university in Pennsylvania. The lead PI (Dr. Buchanan) is housed in the Analytics program teaching analytics and natural language processing. The Human-Centered Interaction Design (with Nathan Aileo and Megan Cackett) program has partnered with the project and PSA to give students an opportunity to work with a non-profit and improve STAPLE's usability.

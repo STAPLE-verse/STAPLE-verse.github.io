@@ -8,7 +8,7 @@ title: "Our Funders"
 knitr::include_graphics("https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg")
 ```
 
-STAPLE received funding from [NASA](https://www.nasa.gov/) through the [Open Science Initiative](https://science.nasa.gov/open-science-overview) through the [ROSE's program](https://science.nasa.gov/researchers/sara/grant-solicitations) (October 2023-October 2024). This funding allows for the development of the minimal viable product of the open-source project management system proposed by PIs for STAPLE.
+STAPLE received funding from [NASA](https://www.nasa.gov/) through the [Open Science Initiative](https://science.nasa.gov/open-science-overview) within the [ROSE program](https://science.nasa.gov/researchers/sara/grant-solicitations) (October 2023-October 2024). This funding allows for the development of the minimal viable product of the open-source project management system proposed by PIs for STAPLE.
 
 ### Psychological Science Accelerator
 
@@ -18,7 +18,7 @@ knitr::include_graphics("https://i0.wp.com/psysciacc.org/wp-content/uploads/2017
 
 The [Psychological Science Accelerator (PSA)](psysciacc.org) was an inspiration for STAPLE with development help from our members. They have agreed to help fund the user experience and user interface component to designing software, along with support for additional programming.
 
-### Harrisburg University 
+### Harrisburg University
 
 ```{r echo = F, fig.align='center', out.width="30%"}
 knitr::include_graphics("pics/hu_logo.png")

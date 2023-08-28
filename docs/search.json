@@ -19,5 +19,33 @@
     "title": "Our Funders",
     "section": "",
     "text": "NASA\n\n\n\n\n\n\n\n\n\nSTAPLE received funding from NASA through the Open Science Initiative within the ROSE program (October 2023-October 2024). This funding allows for the development of the minimal viable product of the open-source project management system proposed by PIs for STAPLE.\n\n\nPsychological Science Accelerator\n\n\n\n\n\n\n\n\n\nThe Psychological Science Accelerator (PSA) was an inspiration for STAPLE with development help from our members. They have agreed to help fund the user experience and user interface component to designing software, along with support for additional programming.\n\n\nHarrisburg University\n\n\n\n\n\n\n\n\n\nHarrisburg University (HU) is a private, non-for-profit STEM-focused university in Pennsylvania. The lead PI (Dr. Buchanan) is housed in the Analytics program teaching analytics and natural language processing. The Human-Centered Interaction Design (with Nathan Aileo and Megan Cackett) program has partnered with the project and PSA to give students an opportunity to work with a non-profit and improve STAPLE’s usability."
+  },
+  {
+    "objectID": "documentation/intro.html",
+    "href": "documentation/intro.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Introduction\nThis is a book created from markdown and executable code.\nSee @knuth84 for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "documentation/index.html",
+    "href": "documentation/index.html",
+    "title": "Preface",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "documentation/summary.html",
+    "href": "documentation/summary.html",
+    "title": "Summary",
+    "section": "",
+    "text": "Summary\nIn summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "documentation/references.html",
+    "href": "documentation/references.html",
+    "title": "References",
+    "section": "",
+    "text": "References"
   }
 ]

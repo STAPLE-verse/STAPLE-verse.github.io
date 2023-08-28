@@ -10,6 +10,8 @@ website:
         text: Home
       - about.qmd
       - funding.qmd
+      - href: https://docs.staple.science/
+        text: Docs
     tools:
       - icon: github
         menu:

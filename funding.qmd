@@ -5,7 +5,7 @@ title: "Our Funders"
 ### NASA
 
 ```{r echo = F, fig.align='center', out.width="20%"}
-knitr::include_graphics("https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg")
+knitr::include_graphics("https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg")
 ```
 
 STAPLE received funding from [NASA](https://www.nasa.gov/) through the [Open Science Initiative](https://science.nasa.gov/open-science-overview) within the [ROSE program](https://science.nasa.gov/researchers/sara/grant-solicitations) (October 2023-October 2024). This funding allows for the development of the minimal viable product of the open-source project management system proposed by PIs for STAPLE.

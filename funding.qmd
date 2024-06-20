@@ -13,7 +13,7 @@ STAPLE received funding from [NASA](https://www.nasa.gov/) through the [Open Sci
 ### Psychological Science Accelerator
 
 ```{r echo = F, fig.align='center', out.width="15%"}
-knitr::include_graphics("https://i0.wp.com/psysciacc.org/wp-content/uploads/2017/10/cropped-cropped-psa.png?fit=512%2C512&ssl=1")
+knitr::include_graphics("pics/logo.png")
 ```
 
 The [Psychological Science Accelerator (PSA)](psysciacc.org) was an inspiration for STAPLE with development help from our members. They have agreed to help fund the user experience and user interface component to designing software, along with support for additional programming.

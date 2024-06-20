@@ -12,6 +12,14 @@ website:
       - funding.qmd
       - href: https://staple.science/documentation/
         text: Docs
+      - text: "App"
+        menu: 
+        - href: https://app.staple.science
+          text: App
+        - href: terms_conditions.qmd
+          text: Terms
+        - href: privacy_policy.qmd
+          text: Privacy
     tools:
       - icon: github
         menu:

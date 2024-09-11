@@ -12,6 +12,8 @@ website:
       - funding.qmd
       - href: https://staple.science/documentation/
         text: Docs
+      - href: posts.qmd
+        text: Updates
       - text: "App"
         menu: 
         - href: https://app.staple.science
@@ -28,7 +30,7 @@ website:
           - text: Report a Bug
             url: mailto:staple.helpdesk@gmail.com
   page-footer: 
-    left: "Copyright 2023, Erin Buchanan, Marton Kovacs" 
+    left: "Copyright 2023-2024, Erin Buchanan, Marton Kovacs" 
 
 format:
   html:

@@ -1,5 +1,8 @@
 ---
 title: "Terms and Conditions"
+format: 
+  html:
+    page-layout: full
 ---
 
 ## TERMS AND CONDITIONS OF USE
@@ -28,9 +31,9 @@ If you have questions about our Websites and Services, please contact us by emai
 
 **Users.** All Users must accept the STAPLE Terms of Use and Privacy Policy.
 
-**Project Manager**. An individual who has the power to create, add, edit, and update all parts of project tracking and metadata. 
+**Project Manager**. An individual who has the power to create, add, edit, and update all parts of project tracking and metadata.
 
-**Contributor**. An individual who has the power to enter information for a project, but cannot view or edit all parts of a project. 
+**Contributor**. An individual who has the power to enter information for a project, but cannot view or edit all parts of a project.
 
 ### 5. YOUR RIGHT TO USE STAPLE
 
@@ -118,4 +121,4 @@ If you are a resident of or are located in the European Union or European Econom
 
 All rights not explicitly granted herein are reserved.
 
-Adapted from the Center for Open Science: (Terms and Conditions)[https://github.com/CenterForOpenScience/cos.io/blob/master/TERMS_OF_USE.md?plain=1]
+Adapted from the Center for Open Science: (Terms and Conditions)\[https://github.com/CenterForOpenScience/cos.io/blob/master/TERMS_OF_USE.md?plain=1\]

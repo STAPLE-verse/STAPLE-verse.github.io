@@ -9,8 +9,8 @@ Scientific research has become increasingly complex, requiring specialized skill
 
 Therefore, STAPLE was designed to be a science focused project management tool that not only helps with the unique challenges of project management of research but includes open and transparent documentation of data and metadata! We aim to have a global impact by promoting the transformation to open science and including researchers and their works that may be commonly ignored, regardless of technical capabilities, so that it is open to everyone. By creating software that allows a point and click interface with error feedback and automated validation, we hope to promote inclusivity within the scientific community by enabling everyone to participate in transparency and openness.
 
-Check out our current progress at:
+Check out our current progress at: <a href="https://staple.science/posts.html">the update blog</a>.
 
-Check out and use the app at:
+Check out and use the app at: <a href="https://app.staple.science/">the app</a>.
 
-Learn more about who we are:
+Learn more about who we are: <a href="https://staple.science/about.html">the about page</a>.

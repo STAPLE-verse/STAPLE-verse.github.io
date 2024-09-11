@@ -1,5 +1,5 @@
 ---
-title: "About STAPLE"
+title: "About Us"
 format: 
   html:
     page-layout: full
@@ -13,22 +13,21 @@ STAPLE is under development by the following core team of people:
 ```{=html}
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 ```
-
 ::: {.github-card data-github="marton-balazs-kovacs" data-width="400" data-height="152" data-theme="default"}
 :::
+
 ```{=html}
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 ```
-
 ::: {.github-card data-github="enyeal" data-width="400" data-height="152" data-theme="default"}
 :::
+
 ```{=html}
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 ```
-
 ::: {.github-card data-github="chartgerink" data-width="400" data-height="152" data-theme="default"}
 :::
+
 ```{=html}
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 ```
-

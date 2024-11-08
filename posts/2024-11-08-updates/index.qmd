@@ -1,0 +1,68 @@
+---
+title: "November Updates"
+description: "STAPLE Bug Fixes"
+author:
+  - name: Erin Buchanan
+    url: https://aggieerin.com
+    orcid: 0000-0002-9689-4189
+date: 09-11-2024
+categories: [updates] # self-defined categories
+citation: 
+  url: https://staple.science/posts/2024-11-08-updates
+image: preview_staple.png
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
+format: 
+  html:
+    page-layout: full
+---
+
+Hi everyone! I have said I would do this more often but the last few months have had many ups and downs. We have been working furiously in the background, but I haven't written it up yet. Since the last post we have:
+
+-   Completely rewritten our database for long term maintenance: used better names for tables and columns and simplified the structure of the database. This reset was a big change, but hopefully will improve adding new features and upgrades.
+
+-   Added the eyeball / view password option for all password fields. 
+
+-   Fixed user type errors that would keep the app from building 
+
+-   Cleaned up old files by deleting unused components 
+
+-   Added actions that make it easier for people to help contribute by checking staple build 
+
+-   Fixed some typos and other issues that kept you from viewing certain pages. 
+
+Then we held BTSCon! Thanks to everyone who came and gave us feedback. Additionally, we’ve met with some of you, and you’ve given us feedback! 
+
+Things we have fixed:
+
+-   Fixed a bug that you would see a team name for one project on a different project page under projects \> contributors \> see contributions
+
+-   Made sure that you always had a project manager on a project, basically if there is only one project manager, you cannot edit their privilege to be a contributor without assigning someone else first. 
+
+-   Renamed a few page links to be clearer: contributor always implies one person and teams implies multiple people, roles always means credit/contribution 
+
+-   Fixed issues with adding / putting together teams 
+
+### What is up next:
+
+-   The email notifications feature has actually been programmed - it would send you one email a day with all the things that have happened. I will test it over the weekend and then turn it on! 
+
+-   Some upgrades to invitations based on user feedback
+
+-   Some other small requests and bug fixes (including that contributors can currently – not on purpose we promise – accidentally delete the project!) 
+
+### Big stuff:
+
+-   Dealing with what happens when you delete a team member, especially if they have done something for the project
+
+-   The project summary page
+
+-   Project level metadata schema updates
+
+-   The ability to comment on individual tasks with the users assigned to that task 
+
+-   Tool-tips and profile preferences in order to add public facing pages (if desired)
+
+### As Always:
+
+Our software is under active development, so we expect that you will find bugs as we continue to improve the platform. We're working hard to make STAPLE better every day, and we really appreciate your patience and support! If you run into any problems or have any feedback, please don't hesitate to report it. Your input helps us fix issues quickly and improve the experience for everyone. You can report bugs or provide feedback via our <a href="mailto:staple.helpdesk@gmail.com">ticketing system</a>. We're committed to resolving them as soon as possible. As part of our server setup, we keep daily backups of the data for a week. If you feel you are missing something from your account, please contact us ASAP to investigate.

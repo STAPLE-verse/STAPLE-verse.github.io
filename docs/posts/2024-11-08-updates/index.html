@@ -8,9 +8,9 @@
 
 <meta name="author" content="Erin Buchanan">
 <meta name="dcterms.date" content="2024-09-11">
-<meta name="description" content="Starting a STAPLE blog for updates to the project">
+<meta name="description" content="STAPLE Bug Fixes">
 
-<title>STAPLE Announcement – STAPLE</title>
+<title>November Updates – STAPLE</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -156,10 +156,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">STAPLE Announcement</h1>
+      <h1 class="title">November Updates</h1>
                   <div>
         <div class="description">
-          Starting a STAPLE blog for updates to the project
+          STAPLE Bug Fixes
         </div>
       </div>
                           <div class="quarto-categories">
@@ -197,9 +197,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a-big-upgrade" id="toc-a-big-upgrade" class="nav-link active" data-scroll-target="#a-big-upgrade">A Big Upgrade</a></li>
-  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s Next</a></li>
-  <li><a href="#hosting-and-service" id="toc-hosting-and-service" class="nav-link" data-scroll-target="#hosting-and-service">Hosting and Service</a></li>
+  <li><a href="#what-is-up-next" id="toc-what-is-up-next" class="nav-link active" data-scroll-target="#what-is-up-next">What is up next:</a></li>
+  <li><a href="#big-stuff" id="toc-big-stuff" class="nav-link" data-scroll-target="#big-stuff">Big stuff:</a></li>
+  <li><a href="#as-always" id="toc-as-always" class="nav-link" data-scroll-target="#as-always">As Always:</a></li>
   </ul>
 </nav>
     </div>
@@ -210,89 +210,43 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Hello everyone!</p>
-<p>Short summary: We have put together a major update for the STAPLE app - you can check it out at https://app.staple.science/. If you previously made an account, you will need to make a new one due to these updates, but you will now receive emails, be able to invite collaborators, and see many improvements.</p>
-<section id="a-big-upgrade" class="level3">
-<h3 class="anchored" data-anchor-id="a-big-upgrade">A Big Upgrade</h3>
-<p>Thank you to everyone who came to one of our information sessions or spoke with us about STAPLE. We have taken your feedback, integrated changes and suggestions, and made general improvements along the way. We are currently focused on finishing the MVP for release as part of our grant report. Other suggested features have been placed on our <a href="https://roadmap.staple.science/">roadmap</a> - you can vote on your favorite ones. We also have a list of <a href="https://github.com/STAPLE-verse/STAPLE/issues">issues</a> we are actively working on.</p>
-<p>What’s new in this update (there’s a lot but here’s some highlights):</p>
+<p>Hi everyone! I have said I would do this more often but the last few months have had many ups and downs. We have been working furiously in the background, but I haven’t written it up yet. Since the last post we have:</p>
 <ul>
-<li>Login/signup:
-<ul>
-<li>You will now see the privacy policy and terms when you register</li>
-<li>You will now receive an email about registering</li>
-<li>You can now use the reset password link to reset your password</li>
-</ul></li>
-<li>Main area:
-<ul>
-<li>Overall dashboard is adjustable. Move the boxes around!</li>
-<li>Invitations: we updated how you add collaborators to projects. You will invite them via email on the project specific page. They will receive an email with the a project code to join the project. They can accept or decline your invitation within their account on the invitations page or by code. You will not be able to add them to anything until they accept.</li>
-</ul></li>
+<li><p>Completely rewritten our database for long term maintenance: used better names for tables and columns and simplified the structure of the database. This reset was a big change, but hopefully will improve adding new features and upgrades.</p></li>
+<li><p>Added the eyeball / view password option for all password fields.&nbsp;</p></li>
+<li><p>Fixed user type errors that would keep the app from building&nbsp;</p></li>
+<li><p>Cleaned up old files by deleting unused components&nbsp;</p></li>
+<li><p>Added actions that make it easier for people to help contribute by checking staple build&nbsp;</p></li>
+<li><p>Fixed some typos and other issues that kept you from viewing certain pages.&nbsp;</p></li>
 </ul>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="invitations.png" class="img-fluid figure-img" width="1508"></p>
-</figure>
-</div>
-</div>
-</div>
+<p>Then we held BTSCon! Thanks to everyone who came and gave us feedback. Additionally, we’ve met with some of you, and you’ve given us feedback!&nbsp;</p>
+<p>Things we have fixed:</p>
 <ul>
-<li>The forms pages got a revamp - the look and feel should be consistent across the app, tool tips were added/made more obvious, the JSON builder was updated, and the preview page works better. <a href="https://github.com/STAPLE-verse/STAPLE/issues/286">We are aware of one or two small issues on the builder and are working on them.</a></li>
-<li>The forms page keeps track of the version of your current form. This update keeps you from accidentally updating a form that you are using to collect metadata.</li>
-<li>The forms page now has the ability to add <em>and edit</em> the default forms.</li>
-<li>We’ve changed the name of labels to Roles to clarify these are contribution roles to a project, for example, you may use your own names or something like <a href="https://credit.niso.org/">CRediT</a>.</li>
+<li><p>Fixed a bug that you would see a team name for one project on a different project page under projects &gt; contributors &gt; see contributions</p></li>
+<li><p>Made sure that you always had a project manager on a project, basically if there is only one project manager, you cannot edit their privilege to be a contributor without assigning someone else first.&nbsp;</p></li>
+<li><p>Renamed a few page links to be clearer: contributor always implies one person and teams implies multiple people, roles always means credit/contribution&nbsp;</p></li>
+<li><p>Fixed issues with adding / putting together teams&nbsp;</p></li>
 </ul>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="default_forms.png" class="img-fluid figure-img" width="703"></p>
-</figure>
-</div>
-</div>
-</div>
+<section id="what-is-up-next" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-up-next">What is up next:</h3>
 <ul>
-<li>Project Area:
-<ul>
-<li>New dashboard - move the boxes around!</li>
-<li>The ability to add multiple tasks to elements at once.</li>
-<li>Add contributors by email and view their contributions.</li>
-<li>View and download form data in excel or json format.</li>
-<li>Project specific notifications.</li>
-<li>Add roles to the task/contributor at the time of creation or later within the Roles page. You do have to make the role in your own account before using it, but it should be available right away (i.e., you don’t have to add it to a project first).</li>
-<li>View the task history and who completed the task.</li>
-</ul></li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="task_history.png" class="img-fluid figure-img" width="915"></p>
-</figure>
-</div>
-</div>
-</div>
-<ul>
-<li>Overall:
-<ul>
-<li>Lots of bug fixes</li>
-<li>Look and feel consistency in form entry boxes and widths, etc.</li>
-</ul></li>
+<li><p>The email notifications feature has actually been programmed - it would send you one email a day with all the things that have happened. I will test it over the weekend and then turn it on!&nbsp;</p></li>
+<li><p>Some upgrades to invitations based on user feedback</p></li>
+<li><p>Some other small requests and bug fixes (including that contributors can currently – not on purpose we promise – accidentally delete the project!)&nbsp;</p></li>
 </ul>
 </section>
-<section id="whats-next" class="level3">
-<h3 class="anchored" data-anchor-id="whats-next">What’s Next</h3>
+<section id="big-stuff" class="level3">
+<h3 class="anchored" data-anchor-id="big-stuff">Big stuff:</h3>
 <ul>
-<li>We are planning a major database update. We built this as we went and now have taken a look at the structure for long term maintenance. Mostly, this doesn’t affect the user end, but please report any issues you find if so.</li>
-<li>Finishing the project summary: this page will get an upgrade and allow you to exclude tasks or other items that shouldn’t appear on the summary. You will then be able to download the summary for sharing.</li>
-<li>Adding more default forms - we have a few more planned for documents, people, data, etc.</li>
+<li><p>Dealing with what happens when you delete a team member, especially if they have done something for the project</p></li>
+<li><p>The project summary page</p></li>
+<li><p>Project level metadata schema updates</p></li>
+<li><p>The ability to comment on individual tasks with the users assigned to that task&nbsp;</p></li>
+<li><p>Tool-tips and profile preferences in order to add public facing pages (if desired)</p></li>
 </ul>
 </section>
-<section id="hosting-and-service" class="level3">
-<h3 class="anchored" data-anchor-id="hosting-and-service">Hosting and Service</h3>
-<p>The STAPLE server is located in Germany hosted on Amazon Lightsail. We chose this set up to provide good service (as AWS, in general, has good uptime) and ensure that places covered by GDPR will be complaint (while we are not collecting “subject” data, you will provide us with emails and/or project information, so we hope this covers many universities’ potential concerns). The data is encrypted on our server, you may delete your account at any time, we don’t use tracking cookies, and you can also check out our <a href="https://staple.science/privacy_policy.html">privacy policy</a>/<a href="https://staple.science/terms_conditions.html">terms of use</a> for how we use your data (mostly for account purposes).</p>
+<section id="as-always" class="level3">
+<h3 class="anchored" data-anchor-id="as-always">As Always:</h3>
 <p>Our software is under active development, so we expect that you will find bugs as we continue to improve the platform. We’re working hard to make STAPLE better every day, and we really appreciate your patience and support! If you run into any problems or have any feedback, please don’t hesitate to report it. Your input helps us fix issues quickly and improve the experience for everyone. You can report bugs or provide feedback via our <a href="mailto:staple.helpdesk@gmail.com">ticketing system</a>. We’re committed to resolving them as soon as possible. As part of our server setup, we keep daily backups of the data for a week. If you feel you are missing something from your account, please contact us ASAP to investigate.</p>
 
 
@@ -300,14 +254,14 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{buchanan2024,
   author = {Buchanan, Erin},
-  title = {STAPLE {Announcement}},
+  title = {November {Updates}},
   date = {2024-09-11},
-  url = {https://staple.science/posts/2024-09-11-staple-announcement},
+  url = {https://staple.science/posts/2024-11-08-updates},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-buchanan2024" class="csl-entry quarto-appendix-citeas" role="listitem">
-Buchanan, Erin. 2024. <span>“STAPLE Announcement.”</span> September 11,
-2024. <a href="https://staple.science/posts/2024-09-11-staple-announcement">https://staple.science/posts/2024-09-11-staple-announcement</a>.
+Buchanan, Erin. 2024. <span>“November Updates.”</span> September 11,
+2024. <a href="https://staple.science/posts/2024-11-08-updates">https://staple.science/posts/2024-11-08-updates</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

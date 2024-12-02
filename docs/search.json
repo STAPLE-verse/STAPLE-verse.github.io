@@ -67,6 +67,34 @@
     "href": "posts.html",
     "title": "STAPLE Updates",
     "section": "",
-    "text": "November Updates\n\n\n\nupdates\n\n\n\nSTAPLE Bug Fixes\n\n\n\nErin Buchanan\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAPLE Announcement\n\n\n\nupdates\n\n\n\nStarting a STAPLE blog for updates to the project\n\n\n\nErin Buchanan\n\n\nSep 11, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Notification Emails and Much More\n\n\n\nupdates\n\n\n\nSTAPLE Updates to Email\n\n\n\nErin Buchanan\n\n\nDec 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember Updates\n\n\n\nupdates\n\n\n\nSTAPLE Bug Fixes\n\n\n\nErin Buchanan\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAPLE Announcement\n\n\n\nupdates\n\n\n\nStarting a STAPLE blog for updates to the project\n\n\n\nErin Buchanan\n\n\nSep 11, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2024-12-02-emails-and-more/index.html",
+    "href": "posts/2024-12-02-emails-and-more/index.html",
+    "title": "Notification Emails and Much More",
+    "section": "",
+    "text": "Hello and why is it already December?!"
+  },
+  {
+    "objectID": "posts/2024-12-02-emails-and-more/index.html#heres-our-current-new-updates",
+    "href": "posts/2024-12-02-emails-and-more/index.html#heres-our-current-new-updates",
+    "title": "Notification Emails and Much More",
+    "section": "Here’s our current new updates:",
+    "text": "Here’s our current new updates:\n\nDaily notifications are live! You will get an email summary each day of new notifications on projects. They are sent at midnight NYC time. Let me know ASAP if they send multiple times and/or not at all when you are expecting them.\nDeleting contributors - you can delete people from a project, but see below. We are still implementing the ability to add them back in if it was an accident.\nWe have double checked permissions and fixed it so that contributors cannot accidentally delete things or do stuff they shouldn’t be able to do.\nWhen you delete projects: the project list will update automatically so you don’t need to refresh to see you deleted a project.\nWhen you add something that triggers an announcement/notification: the project dashboard should update with that information automatically now.\nDownload all your data: in working on the project summary page, we added this button:\n\n\nknitr::include_graphics(\"download_project.png\")\n\n\n\n\n\n\n\n\n\nYou can now download all the data from the project in machine readable format. We are working on the human readable part, and I think you are going to like it a lot!\nSuggestions from users: Invite contributor leads to contributors page instead of project dashboard\nAdded a contributor guide: this is still a work in progress, but we would love to have help!\nStructurally: fixed up the app components so they are easier to find, restructured so that we only create functions once instead of multiple times across the app\nBug fixes! (these are boring but slight quirks we noticed)"
+  },
+  {
+    "objectID": "posts/2024-12-02-emails-and-more/index.html#coming-soon",
+    "href": "posts/2024-12-02-emails-and-more/index.html#coming-soon",
+    "title": "Notification Emails and Much More",
+    "section": "Coming soon:",
+    "text": "Coming soon:\n\nWe are still working through other comments/suggestions from users - they are very helpful!\nOur UX team has mentioned multiple thoughts on current pathways and layouts that are confusing. We are updating them to be smoother and add tooltips for you.\nYou’ll be able to turn off tooltips soon!"
+  },
+  {
+    "objectID": "posts/2024-12-02-emails-and-more/index.html#feedback-welcome",
+    "href": "posts/2024-12-02-emails-and-more/index.html#feedback-welcome",
+    "title": "Notification Emails and Much More",
+    "section": "Feedback welcome:",
+    "text": "Feedback welcome:\n\nDeleting contributors:\nWe have discussed this issue a lot and have come up with a plan but would love your feedback. Currently, when you delete a contributor, you actually do not really delete them. We flag them as “deleted”. Therefore:\n\nThey cannot see the project and/or associated information anymore.\nThey appear on the project manager’s pages as “anonymous”.\nTheir contributions (like completing a task, roles assigned, etc.) are still in your project but they will only show up as “anonymous”.\nThey do actually get removed from any teams they were a part of, for very practical code reasons on our side.\n\nWe went with this approach for two reasons:\n\nThe delete was an accident: if you add them back in, all of their tasks, roles, etc. are maintained so nothing has to be “redone”.\nThe delete was on purpose: but we should still maintain transparency that someone did something. This is the way OSF handles deleted people.\n\nRemember contributor does not equal authorship in the scientific sense. We leave that up to you. We are simply saying they contributed to something on a project. Or were at least asked to."
   }
 ]

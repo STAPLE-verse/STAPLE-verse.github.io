@@ -9,7 +9,7 @@ date: 11-08-2024
 categories: [updates] # self-defined categories
 citation: 
   url: https://staple.science/posts/2024-11-08-updates
-image: preview_staple.png
+image: "../preview_staple.png"
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 
 format: 

@@ -67,7 +67,7 @@
     "href": "posts.html",
     "title": "STAPLE Updates",
     "section": "",
-    "text": "Notification Emails and Much More\n\n\n\nupdates\n\n\n\nSTAPLE Updates to Email\n\n\n\nErin Buchanan\n\n\nDec 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember Updates\n\n\n\nupdates\n\n\n\nSTAPLE Bug Fixes\n\n\n\nErin Buchanan\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAPLE Announcement\n\n\n\nupdates\n\n\n\nStarting a STAPLE blog for updates to the project\n\n\n\nErin Buchanan\n\n\nSep 11, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Project Metadata Update\n\n\n\nupdates\n\n\n\nYou can define your own!\n\n\n\nErin Buchanan\n\n\nJan 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNotification Emails and Much More\n\n\n\nupdates\n\n\n\nSTAPLE Updates to Email\n\n\n\nErin Buchanan\n\n\nDec 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember Updates\n\n\n\nupdates\n\n\n\nSTAPLE Bug Fixes\n\n\n\nErin Buchanan\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAPLE Announcement\n\n\n\nupdates\n\n\n\nStarting a STAPLE blog for updates to the project\n\n\n\nErin Buchanan\n\n\nSep 11, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2024-12-02-emails-and-more/index.html",
@@ -96,5 +96,26 @@
     "title": "Notification Emails and Much More",
     "section": "Feedback welcome:",
     "text": "Feedback welcome:\n\nDeleting contributors:\nWe have discussed this issue a lot and have come up with a plan but would love your feedback. Currently, when you delete a contributor, you actually do not really delete them. We flag them as “deleted”. Therefore:\n\nThey cannot see the project and/or associated information anymore.\nThey appear on the project manager’s pages as “anonymous”.\nTheir contributions (like completing a task, roles assigned, etc.) are still in your project but they will only show up as “anonymous”.\nThey do actually get removed from any teams they were a part of, for very practical code reasons on our side.\n\nWe went with this approach for two reasons:\n\nThe delete was an accident: if you add them back in, all of their tasks, roles, etc. are maintained so nothing has to be “redone”.\nThe delete was on purpose: but we should still maintain transparency that someone did something. This is the way OSF handles deleted people.\n\nRemember contributor does not equal authorship in the scientific sense. We leave that up to you. We are simply saying they contributed to something on a project. Or were at least asked to."
+  },
+  {
+    "objectID": "posts/2025-01-01-project-metadata/index.html",
+    "href": "posts/2025-01-01-project-metadata/index.html",
+    "title": "Project Metadata Update",
+    "section": "",
+    "text": "Happy New Year!"
+  },
+  {
+    "objectID": "posts/2025-01-01-project-metadata/index.html#project-metadata-flexibility",
+    "href": "posts/2025-01-01-project-metadata/index.html#project-metadata-flexibility",
+    "title": "Project Metadata Update",
+    "section": "Project Metadata Flexibility!",
+    "text": "Project Metadata Flexibility!\nWe previously hard coded what we suggested as the “default” metadata as part of a new project setup. You could edit the data in this form, but not create your own.\n\n\n\n\n\n\n\n\n\nAs one of our goals, we want you to define the metadata necessary for your project with help if you aren’t sure (hence the defaults). We first added defaults as part of the form builder:\n\nNotes:\n\nThe alignment thing will be fixed, sheesh - it’s like whack a mole sometimes! Fix something in one spot, it breaks in others.\nWe are adding a few more defaults soon!\n\nNow we have added the ability for you to add those forms to the project, not just tasks:\n\nAnd here’s what assign form looks like:\n\nIf you add a form when you create a new project, you will get an automatic task reminding you to fill it out:\n\nYou can go to settings to edit this selection, download project metadata, and fill out the metadata form.\n\n\nAnd by clicking edit form data:\n\nSo, if you change metadata forms and the “object name” is the same –&gt; it will keep the data for you. That means that if you change the form and then go to edit project form data, you will see anything that matches with labels. What does that mean? Let’s look at forms:\n\nHere’s an example from the form builder - the object name is the way it will match anything between the previous data and the new data.\nWhat does it do with non-matches? Nothing - it keeps them saved for you. If you don’t want that, open the project &gt; settings &gt; edit project form data &gt; reset data. You can download the original data first for safekeeping!\n\nAfter you save a form, you’ll be able to see what data is saved:\n\nOn the project summary page:\n\nYou will be able to download all metadata (tasks, people, other form data, etc.) and soon you will be able to launch the interactive project summary we are working on. I had to do this part first!"
+  },
+  {
+    "objectID": "posts/2025-01-01-project-metadata/index.html#coming-soon",
+    "href": "posts/2025-01-01-project-metadata/index.html#coming-soon",
+    "title": "Project Metadata Update",
+    "section": "Coming Soon",
+    "text": "Coming Soon\n\nInteractive project summary that you can share with everyone\nThe ability to “hide” tasks and elements for privacy reasons\nUpdated task dashboard and ability to leave comments"
   }
 ]

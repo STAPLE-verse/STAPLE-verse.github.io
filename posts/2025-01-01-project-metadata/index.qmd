@@ -1,0 +1,88 @@
+---
+title: "Project Metadata Update"
+description: "You can define your own!"
+author:
+  - name: Erin Buchanan
+    url: https://aggieerin.com
+    orcid: 0000-0002-9689-4189
+date: 01-01-2025
+categories: [updates] # self-defined categories
+citation: 
+  url: https://staple.science/posts/2025-01-01-project-metdata
+image: "../preview_staple.png"
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
+format: 
+  html:
+    page-layout: full
+---
+
+Happy New Year!
+
+## Project Metadata Flexibility! 
+
+We previously hard coded what we suggested as the "default" metadata as part of a new project setup. You could edit the data in this form, but not create your own.
+
+```{r echo=FALSE}
+knitr::include_graphics("old_project.png")
+```
+
+As one of our goals, we want *you* to define the metadata necessary for your project with help if you aren't sure (hence the defaults). We first added defaults as part of the form builder:
+
+![](images/clipboard-3654754981.png)
+
+Notes:
+
+-   The alignment thing will be fixed, sheesh - it's like whack a mole sometimes! Fix something in one spot, it breaks in others.
+
+-   We are adding a few more defaults soon!
+
+Now we have added the ability for you to add those forms to the project, not just tasks:
+
+![](images/clipboard-2263903979.png)
+
+And here's what assign form looks like:
+
+![](images/clipboard-1170427558.png)
+
+If you add a form when you create a new project, you will get an automatic task reminding you to fill it out:
+
+![](images/clipboard-3858753177.png)
+
+You can go to settings to edit this selection, download *project* metadata, and fill out the metadata form.
+
+![](images/clipboard-927205504.png)
+
+![](images/clipboard-117080137.png)
+
+And by clicking edit form data:
+
+![](images/clipboard-319000054.png)
+
+So, if you change metadata forms and the "object name" is the same –\> it will keep the data for you. That means that if you change the form and then go to edit project form data, you will see anything that matches with labels. What does that mean? Let's look at forms:
+
+![](images/clipboard-796647374.png)
+
+Here's an example from the form builder - the object name is the way it will match anything between the previous data and the new data.
+
+What does it do with non-matches? Nothing - it keeps them saved for you. If you don't want that, open the project \> settings \> edit project form data \> reset data. You can download the original data first for safekeeping!
+
+![](images/clipboard-1031385591.png)
+
+After you save a form, you’ll be able to see what data is saved:
+
+![](images/clipboard-4285515544.png)
+
+On the project summary page:
+
+![](images/clipboard-3826698239.png)
+
+You will be able to download *all* metadata (tasks, people, other form data, etc.) and soon you will be able to launch the interactive project summary we are working on. I had to do this part first!
+
+## Coming Soon
+
+-   Interactive project summary that you can share with everyone
+
+-   The ability to "hide" tasks and elements for privacy reasons
+
+-   Updated task dashboard and ability to leave comments

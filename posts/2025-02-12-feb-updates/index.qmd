@@ -1,0 +1,96 @@
+---
+title: "February Updates"
+description: "Big Stuff!"
+author:
+  - name: Erin Buchanan
+    url: https://aggieerin.com
+    orcid: 0000-0002-9689-4189
+date: 02-12-2025
+categories: [updates] # self-defined categories
+citation: 
+  url: https://staple.science/posts/2025-02-12-feb-updates
+image: "../preview_staple.png"
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
+format: 
+  html:
+    page-layout: full
+---
+
+## February Brings Mega-Updates
+
+-   Please be sure to check out our [previous post](<https://staple.science/posts/2025-01-01-project-metadata/>) - the metadata change also is going into place with this update.
+
+### Notification Updates
+
+-   When you receive new notifications, you will now be able to click on the notification to be directed to the location on the app that is part of that notification (task, project, etc.).
+
+-   Notifications can now be all marked as read or unread by selecting them in the right most column.
+
+-   You can also delete them! (They are not recoverable).
+
+![](images/clipboard-552192884.png)
+
+![![](images/clipboard-3538269845.png)](images/clipboard-2420345045.png)
+
+### Real Names
+
+-   The first and last name of users is included across the app if they have provided it on their profile. If not, you will see their username.
+
+    -   Well except notifications –\> added to the list!
+
+![](images/clipboard-3998118366.png)
+
+### Tasks have Comments!
+
+-   You can now comment on a task, and all project managers and people included in that task (individuals or all team members) will receive a notification.
+
+-   People assigned a task see comments on their task page (including the project manager). For the project manager, you will need to go to Edit Responses –\> and then you can review all comments/chats.
+
+-   More updates coming to this page soon to add information about new comments and make tracking easier.
+
+![](images/clipboard-2689223870.png)
+
+![](images/clipboard-3458473093.png)
+
+### Project Summaries
+
+-   We are almost ready to launch the project summary page. It needs a few more tweaks. You can view a preview of it [here](<https://staple.science/project-summary-v1/>). Comments welcome!
+
+-   There will be a few options for project summaries, which we hope people will share along with other information about their project (data, stimuli, materials, etc.).
+
+![](images/clipboard-4290313186.png)
+
+### Admin Panel
+
+-   We are working on an admin panel for those who want to host their own version. It currently holds updates when we migrate features that require changing some database columns. Documentation coming soon.
+
+![](images/clipboard-3905875541.png)
+
+### Anonymize Users
+
+-   We have now tested removing people from projects - still need to change the button doh! - but you can remove people from a project. Their data will remain but will be anonymized. We have now added the feature that you can add them back, if the delete was a mistake.
+
+-   When you add them back, they are reconnected to what they did with the *only* exception being that you will need to add them back to any teams they were included in manually. If they completed a team task, it's still there but very practically due to the backend setup, we remove them from teams when you delete.
+
+-   We set up middleware to avoid showing people information that shouldn't be seen when a user is anonymized within a project. This would allow people to contribute code wise to staple without worry that this specific issue will be a problem (as in, we made it harder to accidentally not do views for the app the wrong way).
+
+### Small Stuff
+
+-   Fixed tooltips that are sometimes hidden with our new updates.
+
+-   Include close buttons on pop ups so it's easier to navigate the app.
+
+-   Removed submit button the form previews so you wouldn't see error messages (since previews are not actually submitted, any validation you created would be unhappy and throw an error).
+
+-   Fixed small misalignments of formatting in a few tables.
+
+-   Fixed issues with popups that were too small or didn't have enough bottom space after the close button making it hard to close.
+
+-   You wanted it, we added it - a Home link on the project area sidebar.
+
+-   The sidebar colors now change with the theme - that should make them much more readable on many of the themes. The cyberpunk is still outrageous.
+
+-   As part of our project metadata update, when you create a new project with assigned metadata form, you will automatically get a new task that reminds you to complete the form for the metadata. :)
+
+![](images/clipboard-3167753212.png)

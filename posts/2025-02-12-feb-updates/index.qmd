@@ -73,7 +73,7 @@ format:
 
 -   When you add them back, they are reconnected to what they did with the *only* exception being that you will need to add them back to any teams they were included in manually. If they completed a team task, it's still there but very practically due to the backend setup, we remove them from teams when you delete.
 
--   We set up middleware to avoid showing people information that shouldn't be seen when a user is anonymized within a project. This would allow people to contribute code wise to staple without worry that this specific issue will be a problem (as in, we made it harder to accidentally not do views for the app the wrong way).
+-   We set up middleware to avoid showing people information that shouldn't be seen when a user is anonymized within a project. This would allow people to contribute code wise to staple without worry that this specific issue will be a problem (as in, we made it harder to accidentally do views for the app the wrong way).
 
 ### Small Stuff
 

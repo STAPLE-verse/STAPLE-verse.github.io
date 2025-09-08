@@ -1,0 +1,46 @@
+---
+title: "Notes are available!"
+description: "Keep project notes"
+author:
+  - name: Erin Buchanan
+    url: https://aggieerin.com
+    orcid: 0000-0002-9689-4189
+date: 09-08-2025
+categories: [updates] # self-defined categories
+citation: 
+  url: https://staple.science/posts/2025-09-08-notes
+image: "../preview_staple.png"
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
+format: 
+  html:
+    page-layout: full
+---
+
+## 🚀 NEW FEATURE: Notes in STAPLE!
+
+We’re excited to announce a brand-new feature in STAPLE: Notes.
+
+Now you can capture your thoughts, meeting highlights, dataset details, and project decisions right inside STAPLE. No more juggling between documents, emails, and random sticky notes — everything stays with your project.
+
+✨ What you can do with Notes
+
+-   Create notes instantly: Jot something down as soon as you think of it.
+
+-   Pin important notes: Keep key information at the top of your project.
+
+-   Archive old notes: Clean up your view while keeping history intact.
+
+-   Control visibility: Keep notes private, share with project managers, or make them visible to all contributors.
+
+-   Edit with ease: Jump back in and update anytime — your notes grow with your project.
+
+![](images/clipboard-2240030945.png)
+
+## Why it matters
+
+Research projects generate tons of details — decisions, to-dos, insights, context. Losing those slows everyone down. With Notes, STAPLE becomes the single place where your team can capture and find critical information.
+
+## Try it now!
+
+Head to your project’s Notes panel and create your first note. We can’t wait to see how this helps your projects run smoother.

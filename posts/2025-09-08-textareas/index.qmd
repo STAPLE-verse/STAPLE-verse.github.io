@@ -1,0 +1,77 @@
+---
+title: "Textarea and Markdown Updates"
+description: "Text Styling"
+author:
+  - name: Erin Buchanan
+    url: https://aggieerin.com
+    orcid: 0000-0002-9689-4189
+date: 09-08-2025
+categories: [updates] # self-defined categories
+citation: 
+  url: https://staple.science/posts/2025-09-08-textareas
+image: "../preview_staple.png"
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
+format: 
+  html:
+    page-layout: full
+---
+
+## Leveling Up Text Editing in STAPLE: Markdown + Previews
+
+Managing research projects means keeping track of **a lot of text**: project descriptions, milestones, tasks, notes, and announcements. Until now, our text areas worked like simple plain-text boxes — you could type long passages, but formatting options were limited, and contributors had no way to see how their notes would appear to others.
+
+That changes today. 🚀
+
+## From Plain Text to Markdown
+
+We’ve upgraded all major text fields in STAPLE to support **Markdown formatting**. That means you can now add structure to your writing with:
+
+-   **Bulleted lists**
+-   Numbered lists
+-   Headings
+-   Links
+-   Emphasis (bold, italics, code)
+
+Markdown is a lightweight syntax many researchers and developers already know, and it gives contributors a simple way to make their content more readable.
+
+> ✨ For example:\
+> Typing `1. First item` + `2. Second item` now creates a numbered list in the preview.
+
+## Live Preview Mode
+
+Formatting is only helpful if you can see it. That’s why we added a **Preview toggle** to textareas across the app:
+
+-   **Edit mode**: Write your text in Markdown.
+-   **Preview mode**: See exactly how contributors will see it.
+
+![](images/clipboard-3762311526.png)
+
+![](images/clipboard-106597928.png)
+
+This toggle appears in project descriptions, milestones, tasks, roles, and even **notes**. For notes, we also made the preview box more readable with padding, borders, and heading adjustments.
+
+## Clickable Links (Done Right)
+
+Links written in Markdown (`[Open Science](https://example.org)`) now render as **clickable links**. To keep things safe, they always open in a new window with `noopener noreferrer`. We’ve styled them in STAPLE’s **primary color** so they stand out.
+
+## Cleaner Styling
+
+To make Markdown content look consistent across the app, we added shared styling for `.markdown-display`. That means:
+
+-   Proper spacing for paragraphs and lists
+-   Compact, readable headings (h1–h4)
+-   Background and padding so notes don’t look cramped
+
+This creates a polished, professional look while staying lightweight.
+
+## Why This Matters
+
+Researchers deserve tools that make project documentation **easy to read and easy to write**. With Markdown + Previews, STAPLE now helps contributors:
+
+-   Communicate ideas clearly
+-   Structure complex notes
+-   Share resources with clickable links
+-   Trust that what they type is what others see
+
+This is just the beginning—we’ll continue refining how text, metadata, and documentation are handled across the platform.

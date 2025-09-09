@@ -1,0 +1,50 @@
+---
+title: "Select All for Tasks"
+description: "Task Update"
+author:
+  - name: Erin Buchanan
+    url: https://aggieerin.com
+    orcid: 0000-0002-9689-4189
+date: 09-10-2025
+categories: [updates] # self-defined categories
+citation: 
+  url: https://staple.science/posts/2025-09-10-select-all
+image: "../preview_staple.png"
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
+format: 
+  html:
+    page-layout: full
+---
+
+## Select All in Task Assignment
+
+Managing tasks just got easier! We’ve introduced a Select All option in the task assignment modals to help you quickly add contributors and teams.
+
+## What’s New
+
+- Select All Contributors: Instantly select every individual contributor in your project with one click.
+- Select All Teams: Easily assign the task to all teams at once.
+- Clear: Quickly deselect everyone if you need to start fresh.
+
+## Why This Matters
+
+Before, users had to manually click through contributor and team lists to assign tasks. This was especially tedious for larger projects. With the new buttons, you can:
+
+- Assign tasks to entire groups instantly.
+- Save time when setting up new projects or repeating tasks.
+- Avoid mistakes and missed checkboxes.
+
+## How It Looks
+
+Inside the Select Contributors or Select Teams modals, you’ll now see two centered buttons at the top:
+
+![](images/clipboard-3607726136.png)
+
+Once clicked, the list below updates instantly.
+
+## What’s Next
+
+- Translations: we are still working on adding this feature to all pages
+- Project/task templates for easier copying and importing 
+

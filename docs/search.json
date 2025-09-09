@@ -67,7 +67,7 @@
     "href": "posts.html",
     "title": "STAPLE Updates",
     "section": "",
-    "text": "Textarea and Markdown Updates\n\n\n\nupdates\n\n\n\nText Styling\n\n\n\nErin Buchanan\n\n\nSep 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNotes are available!\n\n\n\nupdates\n\n\n\nKeep project notes\n\n\n\nErin Buchanan\n\n\nSep 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFebruary Updates\n\n\n\nupdates\n\n\n\nBig Stuff!\n\n\n\nErin Buchanan\n\n\nFeb 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProject Metadata Update\n\n\n\nupdates\n\n\n\nYou can define your own!\n\n\n\nErin Buchanan\n\n\nJan 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNotification Emails and Much More\n\n\n\nupdates\n\n\n\nSTAPLE Updates to Email\n\n\n\nErin Buchanan\n\n\nDec 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember Updates\n\n\n\nupdates\n\n\n\nSTAPLE Bug Fixes\n\n\n\nErin Buchanan\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAPLE Announcement\n\n\n\nupdates\n\n\n\nStarting a STAPLE blog for updates to the project\n\n\n\nErin Buchanan\n\n\nSep 11, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Select All for Tasks\n\n\n\nupdates\n\n\n\nTask Update\n\n\n\nErin Buchanan\n\n\nSep 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTextarea and Markdown Updates\n\n\n\nupdates\n\n\n\nText Styling\n\n\n\nErin Buchanan\n\n\nSep 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNotes are available!\n\n\n\nupdates\n\n\n\nKeep project notes\n\n\n\nErin Buchanan\n\n\nSep 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFebruary Updates\n\n\n\nupdates\n\n\n\nBig Stuff!\n\n\n\nErin Buchanan\n\n\nFeb 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProject Metadata Update\n\n\n\nupdates\n\n\n\nYou can define your own!\n\n\n\nErin Buchanan\n\n\nJan 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNotification Emails and Much More\n\n\n\nupdates\n\n\n\nSTAPLE Updates to Email\n\n\n\nErin Buchanan\n\n\nDec 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember Updates\n\n\n\nupdates\n\n\n\nSTAPLE Bug Fixes\n\n\n\nErin Buchanan\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAPLE Announcement\n\n\n\nupdates\n\n\n\nStarting a STAPLE blog for updates to the project\n\n\n\nErin Buchanan\n\n\nSep 11, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2024-12-02-emails-and-more/index.html",
@@ -208,5 +208,47 @@
     "title": "Notes are available!",
     "section": "Try it now!",
     "text": "Try it now!\nHead to your project’s Notes panel and create your first note. We can’t wait to see how this helps your projects run smoother."
+  },
+  {
+    "objectID": "posts/2025-09-10-select-all/index.html",
+    "href": "posts/2025-09-10-select-all/index.html",
+    "title": "Select All for Tasks",
+    "section": "",
+    "text": "Managing tasks just got easier! We’ve introduced a Select All option in the task assignment modals to help you quickly add contributors and teams."
+  },
+  {
+    "objectID": "posts/2025-09-10-select-all/index.html#select-all-in-task-assignment",
+    "href": "posts/2025-09-10-select-all/index.html#select-all-in-task-assignment",
+    "title": "Select All for Tasks",
+    "section": "",
+    "text": "Managing tasks just got easier! We’ve introduced a Select All option in the task assignment modals to help you quickly add contributors and teams."
+  },
+  {
+    "objectID": "posts/2025-09-10-select-all/index.html#whats-new",
+    "href": "posts/2025-09-10-select-all/index.html#whats-new",
+    "title": "Select All for Tasks",
+    "section": "What’s New",
+    "text": "What’s New\n\nSelect All Contributors: Instantly select every individual contributor in your project with one click.\nSelect All Teams: Easily assign the task to all teams at once.\nClear: Quickly deselect everyone if you need to start fresh."
+  },
+  {
+    "objectID": "posts/2025-09-10-select-all/index.html#why-this-matters",
+    "href": "posts/2025-09-10-select-all/index.html#why-this-matters",
+    "title": "Select All for Tasks",
+    "section": "Why This Matters",
+    "text": "Why This Matters\nBefore, users had to manually click through contributor and team lists to assign tasks. This was especially tedious for larger projects. With the new buttons, you can:\n\nAssign tasks to entire groups instantly.\nSave time when setting up new projects or repeating tasks.\nAvoid mistakes and missed checkboxes."
+  },
+  {
+    "objectID": "posts/2025-09-10-select-all/index.html#how-it-looks",
+    "href": "posts/2025-09-10-select-all/index.html#how-it-looks",
+    "title": "Select All for Tasks",
+    "section": "How It Looks",
+    "text": "How It Looks\nInside the Select Contributors or Select Teams modals, you’ll now see two centered buttons at the top:\n\nOnce clicked, the list below updates instantly."
+  },
+  {
+    "objectID": "posts/2025-09-10-select-all/index.html#whats-next",
+    "href": "posts/2025-09-10-select-all/index.html#whats-next",
+    "title": "Select All for Tasks",
+    "section": "What’s Next",
+    "text": "What’s Next\n\nTranslations: we are still working on adding this feature to all pages\nProject/task templates for easier copying and importing"
   }
 ]

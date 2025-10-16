@@ -1,0 +1,42 @@
+---
+title: "Translations are Coming"
+description: "Translation Update"
+author:
+  - name: Erin Buchanan
+url: https://aggieerin.com
+orcid: 0000-0002-9689-4189
+date: 10-14-2025
+categories: [updates] # self-defined categories
+citation: 
+  url: https://staple.science/posts/2025-10-14-translations
+image: "../preview_staple.png"
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
+format: 
+  html:
+    page-layout: full
+---
+
+## 🌍 Step by Step: Our First Translations Are Live!
+
+We’re excited to share a small but meaningful milestone in STAPLE’s journey toward accessibility and inclusivity: our first translated elements are now live!
+
+Right now, you’ll notice that sidebars and breadcrumbs in the interface can appear in multiple languages (currently English and Spanish, more soon!). It’s a modest start — but it’s a big step toward our goal of making STAPLE usable and welcoming for researchers around the world.
+
+### Why does this matter?
+
+Science is a global enterprise, yet so much of the software that supports it is locked into one language. By building multilingual support into STAPLE from the ground up, we’re making sure teams everywhere can manage, track, and share their projects in the languages they use every day.
+
+This early translation work helps us:
+
+-   Test our internationalization (i18n) setup
+
+-   Identify which parts of the interface need more flexible design for text length and direction
+
+-   Build workflows for community-driven translation so users can contribute in the future
+
+There’s still plenty to do — forms, notifications, and the dashboard are next on our list — but seeing those first translated elements appear is a powerful reminder that progress often starts in small, visible ways.
+
+### We’re getting there. 🌱
+
+If you’d like to help us expand translations or test how things look in your language, stay tuned — we’ll be sharing more soon!

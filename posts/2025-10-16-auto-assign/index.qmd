@@ -1,0 +1,60 @@
+---
+title: "Auto-assign new members and teams to tasks"
+description: "Tasks Update"
+author:
+  - name: Erin Buchanan
+    url: https://aggieerin.com
+    orcid: 0000-0002-9689-4189
+date: 10-16-2025
+categories: [updates] # self-defined categories
+citation: 
+  url: https://staple.science/posts/2025-10-16-auto-assign
+image: "../preview_staple.png"
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
+format: 
+  html:
+    page-layout: full
+---
+
+## **✨ Making Collaboration Effortless: How STAPLE Handles Auto-Assignment**
+
+One of the biggest challenges in managing large, multi-team science projects is **keeping everyone aligned when the team changes**. New contributors join, new teams form, and tasks evolve constantly. In most systems, that means a lot of manual re-assignment. In **STAPLE**, we built an **auto-assignment system** that makes those updates seamless — and transparent.
+
+### **🧩 The Problem**
+
+Before auto-assignment, adding a new person to a project meant someone had to:
+
+-   Manually assign them to every relevant task,
+
+-   Send notifications to keep everyone informed.
+
+That process is tedious and error-prone — especially in collaborative science projects where tasks and contributors change frequently.
+
+### **⚙️ The Idea**
+
+Instead of manually linking people and teams to tasks, each task in STAPLE can specify how future additions should be handled via a simple dropdown:
+
+![](images/clipboard-2230542385.png)
+
+```         
+Auto-assign future additions:
+  ▢ Do not auto-assign
+  ▢ Auto-assign new contributors
+  ▢ Auto-assign new teams
+  ▢ Auto-assign new contributors & teams
+```
+
+### **💡 How It Works**
+
+When a new project member or team joins a project, we will:
+
+1.  Finds all tasks for that project where auto-assign matches the new addition.
+
+2.  Connects the new Contributor or Team to each of those tasks.
+
+3.  Sends a notification to that Contributor or Team Member.
+
+### **🧭 Why It Matters**
+
+This feature creates **huge time savings** and **reduces friction** in collaborative workflows. It helps new contributors hit the ground running, keeps project managers out of busywork, and ensures data consistency across teams and tasks.

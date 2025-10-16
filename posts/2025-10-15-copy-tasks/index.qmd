@@ -1,0 +1,66 @@
+---
+title: "Copy Tasks"
+description: "Tasks Update"
+author:
+  - name: Erin Buchanan
+    url: https://aggieerin.com
+    orcid: 0000-0002-9689-4189
+date: 10-15-2025
+categories: [updates] # self-defined categories
+citation: 
+  url: https://staple.science/posts/2025-10-15-copy-tasks
+image: "../preview_staple.png"
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
+format: 
+  html:
+    page-layout: full
+---
+
+## **✨ Copy Tasks: The Easiest Way to Recreate Workflows in Seconds**
+
+We’ve all been there — you finish setting up a detailed task with the perfect mix of labels, tags, subtasks, deadlines, and team assignments… and then realize you need to do the same thing again for another part of the project.
+
+Until now, that meant rebuilding everything by hand. But not anymore.
+
+## **Introducing**
+
+### **Copy Task**
+
+With the new **Copy Task** feature, you can duplicate an existing task in a single click. Everything that makes your task unique gets copied over — so you can pick up right where you left off without re-entering a thing.
+
+### **🔁 What Gets Copied**
+
+When you copy a task, the following information is automatically included:
+
+-   ✅ **Title & Description** – Your task’s full content and context.
+
+-   🏷️ **Tags** – All tags, so you can keep your categorization consistent.
+
+-   👥 **People and Teams** – The people responsible or involved in the task.
+
+-   🗓️ **Due Dates & Scheduling Info** – Keep your timelines intact.
+
+-   Legit everything!
+
+Everything is copied — except for what *shouldn’t* be, like completion status or timestamps. The new task is a perfect working copy: ready to edit, update, or assign wherever it’s needed.
+
+### **💡 Why This Matters**
+
+Copy Task saves time, ensures consistency, and reduces errors. Whether you’re creating recurring workflows, replicating templates, or just experimenting with variations of the same process, copying tasks helps you stay focused on the *work that matters* — not on data entry.
+
+### **🪄 How It Works**
+
+1.  Open any existing task.
+
+2.  Click **Copy Task**.
+
+3.  A new draft appears with all fields pre-filled. If you cancel, the task is not copied.
+
+4.  Make any quick edits (if needed) and hit **Save**.
+
+That’s it — your new task is live and identical to the original, down to the smallest tag.
+
+### **🚀 Get Started**
+
+You can try Copy Task today on any project. Whether you’re managing research workflows, engineering sprints, or creative projects, this feature helps you move faster without losing detail.

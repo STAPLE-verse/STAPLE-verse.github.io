@@ -1,0 +1,81 @@
+---
+title: "Notification Preferences"
+description: "Email Update"
+author:
+  - name: Erin Buchanan
+    url: https://aggieerin.com
+    orcid: 0000-0002-9689-4189
+date: 11-14-2025
+categories: [updates] # self-defined categories
+citation: 
+  url: https://staple.science/posts/2025-11-14-invites
+image: "../preview_staple.png"
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
+format: 
+  html:
+    page-layout: full
+---
+
+## Email Notification Update
+
+New Feature in STAPLE: Choose How Often You Receive Email Updates
+
+We’re excited to announce a new way to control how STAPLE keeps you informed about your research projects. You can now customize how often you receive two types of email summaries:
+
+1.  Project Activity Updates: Get notified when something changes in your projects — such as new assignments, log entries, or updates from team members.
+2.  Overdue Task Summaries: Stay aware of tasks that have passed their due dates so nothing slips through the cracks.
+
+### ⭐ Choose the Frequency That Works for You
+
+Every STAPLE user can now decide how often they’d like to receive each type of email update. You can select:
+
+-   Daily — Great for active project managers and coordinators
+
+-   Weekly — Perfect for collaborators who check in once a week
+
+-   Never — Ideal if you prefer using dashboards and in-app views instead of email
+
+These settings are separate, so you can mix and match. For example:
+
+-   Daily project updates + Weekly overdue tasks
+
+-   Weekly project updates + No overdue emails
+
+-   Daily for both
+
+-   Weekly for both
+
+-   Or turn them off entirely
+
+📍 Where to Find These Settings
+
+You can set your preferences anytime:
+
+1.  Go to your Profile \[circle at the top right corner\]
+
+2.  Click Edit Profile
+
+3.  Look for the new Email Preferences section
+
+4.  Use the dropdown menus to select your preferred frequency
+
+Your changes take effect immediately.
+
+### 📬 What You’ll Receive
+
+Your digest emails will now match your preferences exactly:
+
+-   If you choose Daily, you’ll receive summaries every day.
+
+-   If you choose Weekly, you’ll receive a weekly digest (typically on Sundays).
+
+-   If you choose Never, STAPLE won’t send emails for that category.
+
+STAPLE will only include the sections you’ve opted into. So if you choose daily project updates but weekly overdue tasks, your daily email will not include overdue information.
+
+### 🎉 Designed to Reduce Inbox Clutter
+
+This feature gives you more control over your workflow and helps prevent inbox overload. Whether you want frequent updates or a less noisy experience, STAPLE adapts to your research style — not the other way around.
+
+If you have suggestions for future enhancements, we’d love to hear from you!

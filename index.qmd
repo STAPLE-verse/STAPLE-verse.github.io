@@ -4,6 +4,7 @@ format:
   html:
     page-layout: full
 ---
+<link rel="canonical" href="https://staplescience.com">
 
 Scientific research has become increasingly complex, requiring specialized skills, interdisciplinary work, and collaboration among large teams. Managing such projects and tracking data and metadata has become a significant challenge. The need for FAIR (findable, accessible, interoperable, and reusable) open data, materials, and metadata has similarly grown, especially considering recent mandates for required sharing for federally funded projects. While user-friendly software tools that help researchers structure metadata exist, few researchers are aware of their necessity and usefulness, and the onus is still on the project team to collect and curate this information. Studies using teams of researchers require sophisticated tracking of all project elements, and therefore, there is a need for scientific project management software that is tailored to the management of all manner of science projects. Software that promotes best practices in FAIR data and metadata would increase openness in all reporting, and tracking, and reporting standards.
 

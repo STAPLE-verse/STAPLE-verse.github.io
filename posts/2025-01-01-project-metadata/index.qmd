@@ -8,7 +8,7 @@ author:
 date: 01-01-2025
 categories: [updates] # self-defined categories
 citation: 
-  url: https://staple.science/posts/2025-01-01-project-metdata
+  url: posts/2025-01-01-project-metdata
 image: "../preview_staple.png"
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 

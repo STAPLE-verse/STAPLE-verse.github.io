@@ -8,7 +8,7 @@ author:
 date: 02-12-2025
 categories: [updates] # self-defined categories
 citation: 
-  url: https://staple.science/posts/2025-02-12-feb-updates
+  url: posts/2025-02-12-feb-updates
 image: "../preview_staple.png"
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 
@@ -19,7 +19,7 @@ format:
 
 ## February Brings Mega-Updates
 
--   Please be sure to check out our [previous post](<https://staple.science/posts/2025-01-01-project-metadata/>) - the metadata change also is going into place with this update.
+-   Please be sure to check out our [previous post](<posts/2025-01-01-project-metadata/>) - the metadata change also is going into place with this update.
 
 ### Notification Updates
 
@@ -55,7 +55,7 @@ format:
 
 ### Project Summaries
 
--   We are almost ready to launch the project summary page. It needs a few more tweaks. You can view a preview of it [here](<https://staple.science/project-summary-v1/>). Comments welcome!
+-   We are almost ready to launch the project summary page. It needs a few more tweaks. You can view a preview of it [here](<project-summary-v1/>). Comments welcome!
 
 -   There will be a few options for project summaries, which we hope people will share along with other information about their project (data, stimuli, materials, etc.).
 

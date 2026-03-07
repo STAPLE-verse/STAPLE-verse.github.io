@@ -8,7 +8,7 @@ author:
 date: 09-11-2024
 categories: [updates] # self-defined categories
 citation: 
-  url: https://staple.science/posts/2024-09-11-staple-announcement
+  url: posts/2024-09-11-staple-announcement
 image: "../preview_staple.png"
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 
@@ -19,11 +19,11 @@ format:
 
 Hello everyone!
 
-Short summary: We have put together a major update for the STAPLE app - you can check it out at https://app.staple.science/. If you previously made an account, you will need to make a new one due to these updates, but you will now receive emails, be able to invite collaborators, and see many improvements.
+Short summary: We have put together a major update for the STAPLE app - you can check it out at https://app.staple.science/ or https://app.staplescience.com. If you previously made an account, you will need to make a new one due to these updates, but you will now receive emails, be able to invite collaborators, and see many improvements.
 
 ### A Big Upgrade
 
-Thank you to everyone who came to one of our information sessions or spoke with us about STAPLE. We have taken your feedback, integrated changes and suggestions, and made general improvements along the way. We are currently focused on finishing the MVP for release as part of our grant report. Other suggested features have been placed on our <a href="https://roadmap.staple.science/">roadmap</a> - you can vote on your favorite ones. We also have a list of <a href="https://github.com/STAPLE-verse/STAPLE/issues">issues</a> we are actively working on.
+Thank you to everyone who came to one of our information sessions or spoke with us about STAPLE. We have taken your feedback, integrated changes and suggestions, and made general improvements along the way. We are currently focused on finishing the MVP for release as part of our grant report. Other suggested features have been placed on our <a href="https://roadmap.staplescience.com/">roadmap</a> - you can vote on your favorite ones. We also have a list of <a href="https://github.com/STAPLE-verse/STAPLE/issues">issues</a> we are actively working on.
 
 What's new in this update (there's a lot but here's some highlights):
 
@@ -73,6 +73,6 @@ knitr::include_graphics("task_history.png")
 
 ### Hosting and Service
 
-The STAPLE server is located in Germany hosted on Amazon Lightsail. We chose this set up to provide good service (as AWS, in general, has good uptime) and ensure that places covered by GDPR will be complaint (while we are not collecting "subject" data, you will provide us with emails and/or project information, so we hope this covers many universities' potential concerns). The data is encrypted on our server, you may delete your account at any time, we don't use tracking cookies, and you can also check out our <a href="https://staple.science/privacy_policy.html">privacy policy</a>/<a href="https://staple.science/terms_conditions.html">terms of use</a> for how we use your data (mostly for account purposes).
+The STAPLE server is located in Germany hosted on Amazon Lightsail. We chose this set up to provide good service (as AWS, in general, has good uptime) and ensure that places covered by GDPR will be complaint (while we are not collecting "subject" data, you will provide us with emails and/or project information, so we hope this covers many universities' potential concerns). The data is encrypted on our server, you may delete your account at any time, we don't use tracking cookies, and you can also check out our <a href="privacy_policy.html">privacy policy</a>/<a href="terms_conditions.html">terms of use</a> for how we use your data (mostly for account purposes).
 
 Our software is under active development, so we expect that you will find bugs as we continue to improve the platform. We're working hard to make STAPLE better every day, and we really appreciate your patience and support! If you run into any problems or have any feedback, please don't hesitate to report it. Your input helps us fix issues quickly and improve the experience for everyone. You can report bugs or provide feedback via our <a href="mailto:staple.helpdesk@gmail.com">ticketing system</a>. We're committed to resolving them as soon as possible. As part of our server setup, we keep daily backups of the data for a week. If you feel you are missing something from your account, please contact us ASAP to investigate.

@@ -8,7 +8,7 @@ orcid: 0000-0002-9689-4189
 date: 10-14-2025
 categories: [updates] # self-defined categories
 citation: 
-  url: https://staple.science/posts/2025-10-14-translations
+  url: posts/2025-10-14-translations
 image: "../preview_staple.png"
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 

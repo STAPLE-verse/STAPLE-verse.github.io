@@ -10,13 +10,13 @@ website:
         text: Home
       - about.qmd
       - funding.qmd
-      - href: https://staple.science/documentation/
+      - href: documentation
         text: Docs
       - href: posts.qmd
         text: Updates
       - text: "App"
         menu: 
-        - href: https://app.staple.science
+        - href: https://app.staplescience.com
           text: App
         - href: terms_conditions.qmd
           text: Terms

@@ -19,7 +19,7 @@ format:
 
 Hello everyone!
 
-Short summary: We have put together a major update for the STAPLE app - you can check it out at https://app.staple.science/ or https://app.staplescience.com. If you previously made an account, you will need to make a new one due to these updates, but you will now receive emails, be able to invite collaborators, and see many improvements.
+Short summary: We have put together a major update for the STAPLE app - you can check it out at https://app.staplescience.com/ or https://app.staplescience.com. If you previously made an account, you will need to make a new one due to these updates, but you will now receive emails, be able to invite collaborators, and see many improvements.
 
 ### A Big Upgrade
 

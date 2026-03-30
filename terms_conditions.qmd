@@ -9,7 +9,7 @@ format:
 
 ### 1. INTRODUCTION
 
-STAPLE is open source software shared under a CC-BY-4.0 International Attribution license. This document covers the terms of use for our hosted version of the software at https://app.staple.science/ or https://app.staplescience.com. These terms of service apply to those who add their content to our website.
+STAPLE is open source software shared under a CC-BY-4.0 International Attribution license. This document covers the terms of use for our hosted version of the software at https://app.staplescience.com/ or https://app.staplescience.com. These terms of service apply to those who add their content to our website.
 
 These Terms of Use describe the conditions under which the STAPLE allows the public to use the Websites and Services.
 

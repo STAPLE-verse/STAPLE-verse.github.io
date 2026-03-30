@@ -7,7 +7,7 @@ format:
 
 ## PRIVACY POLICY
 
-STAPLE is open source software shared under a CC-BY-4.0 International Attribution license. This document covers the terms of use for our hosted version of the software at https://app.staple.science/ or https://app.staplescience.com. This privacy policy applies to those who add their content to our website.
+STAPLE is open source software shared under a CC-BY-4.0 International Attribution license. This document covers the terms of use for our hosted version of the software at https://app.staplescience.com/ or https://app.staplescience.com. This privacy policy applies to those who add their content to our website.
 
 In this document, we use "you" to refer to researchers and other users of our Websites and Services. We do not collect any personally identifiable information about you when you visit our Websites unless you choose to provide us with that information. We do not collect information from you for commercial marketing or any other purpose unrelated to our purpose.
 
@@ -21,7 +21,7 @@ You are asked to provide explicit agreement to the terms of this Privacy Policy 
 
 ### 2. SITES COVERED BY THIS PRIVACY POLICY
 
-This Privacy Policy applies to the STAPLE website located at https://app.staple.science or https://app.staplescience.com. Our privacy practices are based on administrator and collaborator access to data.
+This Privacy Policy applies to the STAPLE website located at https://app.staplescience.com or https://app.staplescience.com. Our privacy practices are based on administrator and collaborator access to data.
 
 ### 3. CHANGES TO THIS PRIVACY POLICY
 

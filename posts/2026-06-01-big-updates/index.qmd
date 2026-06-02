@@ -1,0 +1,122 @@
+---
+title: "Spring 2026 Big Updates"
+description: "Everything that's changed since November 2025"
+author:
+  - name: Erin Buchanan
+    url: https://aggieerin.com
+    orcid: 0000-0002-9689-4189
+date: 06-01-2026
+categories: [updates]
+citation:
+  url: posts/2026-06-01-big-updates
+image: "../preview_staple.png"
+draft: false
+
+format:
+  html:
+    page-layout: full
+---
+
+## A Lot Has Happened Since November
+
+We've been heads-down building for the last several months, and it's time for a proper update. Since our last round-up post, STAPLE has seen major new features, significant improvements to the notification system, a revamped form experience, and a whole lot of quality-of-life fixes. Here's what's new.
+
+------------------------------------------------------------------------
+
+### Copy Projects
+
+- The most-requested feature is finally here: **you can now copy an entire project**. If you've set up a project structure you love — tasks, teams, roles, forms — you can duplicate it to start a new project without rebuilding everything from scratch. This is especially handy for labs that run the same study repeatedly or want to use a past project as a template.
+
+------------------------------------------------------------------------
+
+### Notifications: A Full Overhaul
+
+Notifications got a major rework on multiple fronts:
+
+- **Pagination**: The old notifications table only loaded 100 rows — now all your notifications load properly, no matter how many you have.
+
+- **Filtering**: You can now filter notifications by date, read/unread status, and completed/uncompleted, making it much easier to find what you're looking for.
+
+- **Table search**: Search across all your notifications directly from the notifications page.
+
+- **Anonymized notifications**: Notifications from users who have been removed from a project now display anonymized names rather than broken references.
+
+- **Deleted user marker**: If a user has been removed, notifications from them are clearly marked so context isn't lost.
+
+- **Comment notifications**: Fixed a bug where comments on the overall task page weren't triggering notifications correctly.
+
+- **Team vs. individual task clarity**: Task labels now make it clear whether a notification is for a team task or an individual assignment.
+
+------------------------------------------------------------------------
+
+### Forms: Folders, Tags, and Markdown
+
+Forms got a significant upgrade:
+
+- **Folders and tags**: You can now organize your forms into folders and tag them, making it much easier to manage large collections of forms across a project.
+
+- **Markdown descriptions**: Form field descriptions now support Markdown, so you can add formatting, links, and structure to help participants understand what you're asking.
+
+- **Updated form descriptions across the app**: We reviewed and rewrote form field descriptions throughout STAPLE to make them clearer and more consistent.
+
+- You can now review where **forms are used** on the main form page, and archive and/or delete unused forms and individual form versions.
+
+------------------------------------------------------------------------
+
+### Anonymize Form Outputs
+
+- **Anonymous form data**: Form submissions can now be marked as anonymous, giving you more flexibility for studies that need to protect participant identity.
+
+- You can set this feature individually for each task.
+
+------------------------------------------------------------------------
+
+### Notes Sidebar & Sorting
+
+The notes experience got two meaningful upgrades:
+
+- **Notes sidebar**: Notes are now accessible from a dedicated sidebar, so you can jot things down without leaving the page you're on.
+
+- **Sort notes**: You can sort your notes by date created or by title — whichever helps you find things faster.
+
+- **Download notes**: Notes can now be downloaded directly.
+
+------------------------------------------------------------------------
+
+### Teams: Create Before Joining
+
+- Teams can now be created before all members have joined the project. Previously, you had to wait until everyone had accepted their invites before building teams. Now you can set up team structures in advance, and members are automatically added when they join.
+
+------------------------------------------------------------------------
+
+### Pagination Across the App
+
+- Several tables were previously capped at 100 rows: contributors, tasks, forms, and roles. All of these now paginate correctly so large projects don't hit an invisible ceiling.
+
+------------------------------------------------------------------------
+
+### In-App Feedback Form
+
+- We added a feedback form directly inside STAPLE. If something isn't working or you have a suggestion, you can now send it to us without leaving the app.
+
+------------------------------------------------------------------------
+
+### Consistent Icons
+
+- We did a sweep to make icons consistent across the entire app. Buttons and actions that do the same thing now look the same everywhere.
+
+------------------------------------------------------------------------
+
+### Small Fixes
+
+- Fixed a bug where task creation pages would refresh if you switched browser tabs mid-form.
+- Fixed duplicate tag entries appearing on forms.
+- Fixed invite links that could be accepted multiple times.
+- Fixed a bug in the project summary viewer where placeholder text ("Select a card to view details about the contributor") was rendering as raw HTML instead of formatted text when no contributors or teams were present.
+- Fixed scrolling issues inside tables.
+- Fixed role/task plots that would show unhelpful bars when data was missing — they now hide gracefully.
+- Various TypeScript and visual consistency fixes throughout.
+
+------------------------------------------------------------------------
+
+As always, thank you to everyone who has filed issues, sent feedback, and helped test new features. If you run into anything or have ideas, use the new in-app feedback form or open an issue on GitHub!

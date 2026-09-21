@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://staplescience.com/schemas/marker-template/semantic/v1/semantics.schema.json",
+  "title": "MARKER Semantic V1 Component",
+  "description": "The Semantic V1 component of a MARKER Core V1 template package. Cross-component field resolution, type compatibility, node ownership, and mapping coverage are validated separately.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["bindings"],
+  "properties": {
+    "root": {
+      "$ref": "#/$defs/root"
+    },
+    "bindings": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/binding"
+      }
+    }
+  },
+  "anyOf": [
+    {
+      "properties": {
+        "root": true
+      },
+      "required": ["root"]
+    },
+    {
+      "properties": {
+        "bindings": {
+          "type": "array",
+          "minItems": 1
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "absoluteIri": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z][A-Za-z0-9+.-]*:",
+      "description": "A lexical absolute-IRI candidate. Full absolute-IRI validation is a Semantic V1 component-validation rule."
+    },
+    "fieldPointer": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^/",
+      "description": "An RFC 6901 field-pointer candidate rooted at form.schema. Resolution is a Semantic V1 cross-component rule."
+    },
+    "root": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["classIri"],
+      "properties": {
+        "classIri": {
+          "$ref": "#/$defs/absoluteIri"
+        }
+      }
+    },
+    "bindingBase": {
+      "type": "object",
+      "required": ["fieldPointer", "predicate", "valueKind"],
+      "properties": {
+        "fieldPointer": {
+          "$ref": "#/$defs/fieldPointer"
+        },
+        "parentNodePointer": {
+          "$ref": "#/$defs/fieldPointer"
+        },
+        "predicate": {
+          "$ref": "#/$defs/absoluteIri"
+        },
+        "valueKind": {
+          "enum": ["literal", "iri", "node"]
+        }
+      }
+    },
+    "literalBinding": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/bindingBase"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "valueKind": {
+              "const": "literal"
+            },
+            "datatypeIri": {
+              "$ref": "#/$defs/absoluteIri"
+            },
+            "language": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9]+(-[A-Za-z0-9]+)*$",
+              "description": "A lexical BCP 47 candidate. Full structural validation is a Semantic V1 component-validation rule."
+            }
+          },
+          "not": {
+            "properties": {
+              "datatypeIri": true,
+              "language": true
+            },
+            "required": ["datatypeIri", "language"]
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "iriBinding": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/bindingBase"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "valueKind": {
+              "const": "iri"
+            },
+            "valueMappings": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/valueMapping"
+              }
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "nodeBinding": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/bindingBase"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "valueKind": {
+              "const": "node"
+            },
+            "classIri": {
+              "$ref": "#/$defs/absoluteIri"
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "valueMapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "iri"],
+      "properties": {
+        "value": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
+        },
+        "iri": {
+          "$ref": "#/$defs/absoluteIri"
+        }
+      }
+    },
+    "binding": {
+      "description": "Dispatches on valueKind so an invalid binding is checked against its one intended kind-specific shape instead of accumulating unrelated failures from the other two kinds.",
+      "if": {
+        "type": "object",
+        "properties": {
+          "valueKind": {
+            "const": "literal"
+          }
+        },
+        "required": ["valueKind"]
+      },
+      "then": {
+        "$ref": "#/$defs/literalBinding"
+      },
+      "else": {
+        "if": {
+          "type": "object",
+          "properties": {
+            "valueKind": {
+              "const": "node"
+            }
+          },
+          "required": ["valueKind"]
+        },
+        "then": {
+          "$ref": "#/$defs/nodeBinding"
+        },
+        "else": {
+          "$ref": "#/$defs/iriBinding"
+        }
+      }
+    }
+  }
+}

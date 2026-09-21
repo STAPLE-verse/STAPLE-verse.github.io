@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>v1 – STAPLE</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-26827f95213357c060b998e0666f8ebe.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">STAPLE</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About Us</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../funding.html"> 
+<span class="menu-text">Our Funders</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../documentation"> 
+<span class="menu-text">Docs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../posts.html"> 
+<span class="menu-text">Updates</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-app" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">App</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-app">    
+        <li>
+    <a class="dropdown-item" href="https://app.staplescience.com">
+ <span class="dropdown-text">App</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../terms_conditions.html">
+ <span class="dropdown-text">Terms</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../privacy_policy.html">
+ <span class="dropdown-text">Privacy</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/STAPLE-verse/STAPLE-verse.github.io">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="mailto:staple.helpdesk@gmail.com">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#marker-metadata-template-specification-semantic-v1-scope" id="toc-marker-metadata-template-specification-semantic-v1-scope" class="nav-link active" data-scroll-target="#marker-metadata-template-specification-semantic-v1-scope">MARKER Metadata Template Specification — Semantic V1 Scope</a>
+  <ul class="collapse">
+  <li><a href="#processing-model" id="toc-processing-model" class="nav-link" data-scroll-target="#processing-model">Processing model</a></li>
+  <li><a href="#field-resolution-and-node-ownership" id="toc-field-resolution-and-node-ownership" class="nav-link" data-scroll-target="#field-resolution-and-node-ownership">Field resolution and node ownership</a></li>
+  <li><a href="#included-in-semantic-v1" id="toc-included-in-semantic-v1" class="nav-link" data-scroll-target="#included-in-semantic-v1">Included in Semantic V1</a>
+  <ul class="collapse">
+  <li><a href="#literal-projection" id="toc-literal-projection" class="nav-link" data-scroll-target="#literal-projection">Literal projection</a></li>
+  </ul></li>
+  <li><a href="#normative-projection-algorithm" id="toc-normative-projection-algorithm" class="nav-link" data-scroll-target="#normative-projection-algorithm">Normative projection algorithm</a>
+  <ul class="collapse">
+  <li><a href="#preconditions-and-result" id="toc-preconditions-and-result" class="nav-link" data-scroll-target="#preconditions-and-result">Preconditions and result</a></li>
+  <li><a href="#binding-traversal" id="toc-binding-traversal" class="nav-link" data-scroll-target="#binding-traversal">Binding traversal</a></li>
+  <li><a href="#value-projection" id="toc-value-projection" class="nav-link" data-scroll-target="#value-projection">Value projection</a></li>
+  <li><a href="#failure-and-determinism" id="toc-failure-and-determinism" class="nav-link" data-scroll-target="#failure-and-determinism">Failure and determinism</a></li>
+  </ul></li>
+  <li><a href="#exact-template-association-boundary" id="toc-exact-template-association-boundary" class="nav-link" data-scroll-target="#exact-template-association-boundary">Exact-template association boundary</a></li>
+  <li><a href="#deferred-beyond-v1" id="toc-deferred-beyond-v1" class="nav-link" data-scroll-target="#deferred-beyond-v1">Deferred beyond V1</a></li>
+  <li><a href="#validation-and-compatibility-independence" id="toc-validation-and-compatibility-independence" class="nav-link" data-scroll-target="#validation-and-compatibility-independence">Validation and compatibility independence</a></li>
+  <li><a href="#validation-diagnostic-contract" id="toc-validation-diagnostic-contract" class="nav-link" data-scroll-target="#validation-diagnostic-contract">Validation diagnostic contract</a></li>
+  <li><a href="#normative-artifacts" id="toc-normative-artifacts" class="nav-link" data-scroll-target="#normative-artifacts">Normative artifacts</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="marker-metadata-template-specification-semantic-v1-scope" class="level1">
+<h1>MARKER Metadata Template Specification — Semantic V1 Scope</h1>
+<blockquote class="blockquote">
+<p><strong>Status:</strong> Production-stable V1, declared final as <code>v1.0.0</code>. This document is normative for this release and defines the boundary, binding vocabulary, component JSON Schema, cross-component validation rules, deterministic projection algorithm, and diagnostic contracts of the lean Semantic V1 profile.</p>
+</blockquote>
+<p>Semantic V1 is an optional profile for attaching machine-interpretable meaning to fields in a Core V1 MARKER metadata-template package and deterministically projecting a validated metadata instance to expanded JSON-LD. It is deliberately small: the raw JSON instance remains authoritative, while JSON-LD is a derived representation that can be regenerated from the exact template version, semantic bindings, and response.</p>
+<p>Semantic V1 uses the profile URI already reserved by Core V1:</p>
+<pre class="text"><code>https://staplescience.com/profiles/marker-template/semantic/v1</code></pre>
+<p>The <code>semantics</code> component is optional for a Core V1 package, but required for a package that claims Semantic V1 conformance. When a package contains the top-level <code>semantics</code> component, Core V1 requires this URI in <code>conformsTo</code>, and declaring the URI requires the component. Bindings address fields with Core V1 field pointers rooted at <code>form.schema</code>. Semantic annotations MUST NOT be embedded as invented keywords inside the form schema.</p>
+<section id="processing-model" class="level2">
+<h2 class="anchored" data-anchor-id="processing-model">Processing model</h2>
+<p>Projection takes:</p>
+<ol type="1">
+<li>a Core V1-conformant template package with a valid Semantic V1 component;</li>
+<li>a metadata instance that validates against the package’s <code>form.schema</code>; and</li>
+<li>an optional absolute root instance IRI supplied by the runtime.</li>
+</ol>
+<p>It produces an offline, deterministic expanded JSON-LD representation. If the runtime does not supply a root instance IRI, projection uses a blank root node. Projection never changes the stored metadata response.</p>
+<pre class="text"><code>Core template + Semantic V1 bindings + validated response + optional root IRI
+                                      |
+                                      v
+                         expanded JSON-LD projection</code></pre>
+</section>
+<section id="field-resolution-and-node-ownership" class="level2">
+<h2 class="anchored" data-anchor-id="field-resolution-and-node-ownership">Field resolution and node ownership</h2>
+<p>Semantic V1 field pointers retain the RFC 6901 token syntax and instance-field addressing rules defined by Core V1. Resolution MUST also traverse Core V1 local <code>$ref</code> values deterministically. A local reference is transparent while following an instance-bearing path: the resolver dereferences it against the root <code>form.schema</code> and continues resolving the remaining path in the referenced schema.</p>
+<p>For example, given:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"properties"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"contributors"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"array"</span><span class="fu">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"items"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"$ref"</span><span class="fu">:</span> <span class="st">"#/definitions/contributor"</span> <span class="fu">}</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"definitions"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"contributor"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"object"</span><span class="fu">,</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"properties"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"name"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"string"</span> <span class="fu">},</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"orcid"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"string"</span><span class="fu">,</span> <span class="dt">"format"</span><span class="fu">:</span> <span class="st">"uri"</span> <span class="fu">}</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>the instance-bearing field pointers are:</p>
+<pre class="text"><code>/properties/contributors
+/properties/contributors/items/properties/name
+/properties/contributors/items/properties/orcid</code></pre>
+<p>They are not pointers into <code>/definitions</code>. A resolver encountering the <code>$ref</code> at <code>contributors/items</code> dereferences <code>#/definitions/contributor</code> before resolving <code>properties/name</code> or <code>properties/orcid</code>. Resolution MUST be offline, MUST use only Core-conformant local references, and MUST fail with a diagnostic for an unresolved reference or a reference cycle that prevents resolution.</p>
+<p>Every binding MAY contain <code>parentNodePointer</code>. The property establishes which <code>node</code> binding owns the subject from which that binding’s predicate is emitted:</p>
+<ul>
+<li>a binding without <code>parentNodePointer</code> is emitted from the root instance node;</li>
+<li>a binding for a field nested within a bound object or object-array node MUST set <code>parentNodePointer</code> to the field pointer of its nearest containing <code>node</code> binding;</li>
+<li><code>parentNodePointer</code> MUST resolve to an existing binding whose value kind is <code>node</code>;</li>
+<li>the child field MUST be inside the object represented by that node after local-reference resolution; and</li>
+<li>self-parenting and parent cycles are invalid.</li>
+</ul>
+<p>A nested <code>node</code> binding follows the same rule, allowing deterministic trees of related nodes. Parentage MUST NOT be inferred solely from textual pointer prefixes.</p>
+</section>
+<section id="included-in-semantic-v1" class="level2">
+<h2 class="anchored" data-anchor-id="included-in-semantic-v1">Included in Semantic V1</h2>
+<p>Semantic V1 includes:</p>
+<ul>
+<li>a Core-optional, Semantic-required top-level <code>semantics</code> component;</li>
+<li>an optional class IRI for the root node;</li>
+<li>partial annotation, with no requirement to bind every form field;</li>
+<li>one absolute predicate IRI for every binding;</li>
+<li>exactly one binding for a given field pointer;</li>
+<li>explicit node-child ownership through <code>parentNodePointer</code>;</li>
+<li>three value kinds: <code>literal</code>, <code>iri</code>, and <code>node</code>;</li>
+<li>literal projection for Core scalar types and supported date, date-time, and time formats;</li>
+<li>an optional datatype IRI compatible with the bound field;</li>
+<li>an optional fixed BCP 47 language tag for a compatible literal binding;</li>
+<li>direct absolute IRI values;</li>
+<li>exact, local mappings from stored values to absolute IRIs;</li>
+<li>scalar arrays projected as repeated values;</li>
+<li>object and object-array fields projected as related nodes;</li>
+<li>an optional class IRI for each nested node binding; and</li>
+<li>deterministic, offline expanded JSON-LD projection without dereferencing remote resources.</li>
+</ul>
+<p>The three value kinds have these roles:</p>
+<ul>
+<li><strong><code>literal</code></strong> projects a scalar value as an RDF literal. A compatible fixed datatype or language may refine its representation.</li>
+<li><strong><code>iri</code></strong> projects either a stored absolute IRI or the result of an exact local value-to-IRI mapping as an identified RDF node.</li>
+<li><strong><code>node</code></strong> projects an object, or each member of an object array, as a related node whose child fields may have their own bindings. Nested nodes are blank nodes in V1 and may carry an explicitly declared class IRI.</li>
+</ul>
+<section id="literal-projection" class="level3">
+<h3 class="anchored" data-anchor-id="literal-projection">Literal projection</h3>
+<p>In the absence of an explicit datatype or language tag, Semantic V1 uses these datatype IRIs:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Core field</th>
+<th>Default RDF datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>type: "string"</code></td>
+<td><code>http://www.w3.org/2001/XMLSchema#string</code></td>
+</tr>
+<tr class="even">
+<td><code>type: "boolean"</code></td>
+<td><code>http://www.w3.org/2001/XMLSchema#boolean</code></td>
+</tr>
+<tr class="odd">
+<td><code>type: "integer"</code></td>
+<td><code>http://www.w3.org/2001/XMLSchema#integer</code></td>
+</tr>
+<tr class="even">
+<td><code>type: "number"</code></td>
+<td><code>http://www.w3.org/2001/XMLSchema#double</code></td>
+</tr>
+<tr class="odd">
+<td>string with <code>format: "date"</code></td>
+<td><code>http://www.w3.org/2001/XMLSchema#date</code></td>
+</tr>
+<tr class="even">
+<td>string with <code>format: "date-time"</code></td>
+<td><code>http://www.w3.org/2001/XMLSchema#dateTime</code></td>
+</tr>
+<tr class="odd">
+<td>string with <code>format: "time"</code></td>
+<td><code>http://www.w3.org/2001/XMLSchema#time</code></td>
+</tr>
+</tbody>
+</table>
+<p>Other Core string formats project with the XSD string datatype shown above. Projection preserves the validated JSON value: it MUST NOT trim, case-fold, parse, or otherwise rewrite strings. Boolean, integer, and number values remain JSON scalars in expanded JSON-LD with the datatype shown above.</p>
+<p>An explicit datatype MUST be an absolute IRI. For boolean, integer, number, date, date-time, and time fields, V1 permits only the corresponding datatype shown in the table. An unformatted string field MAY declare another absolute datatype IRI; Semantic V1 preserves its lexical string but does not dereference the datatype or verify a custom datatype’s lexical space.</p>
+<p>A fixed language tag is permitted only for an unformatted string field and MUST be a structurally valid BCP 47 tag. A literal binding MUST NOT declare both a datatype and a language tag. A language-tagged value is represented as an RDF language-tagged string rather than with the XSD string datatype.</p>
+<p>Every predicate, class, datatype, mapped value, and supplied instance IRI is used exactly as written. Semantic V1 does not expand prefixes or compact IRIs: for example, <code>https://schema.org/name</code> identifies the Schema.org predicate, while <code>schema:name</code> would be a different IRI with the scheme <code>schema</code> and MUST NOT be used as shorthand for the Schema.org IRI.</p>
+<p>Unbound fields are omitted from JSON-LD and retained unchanged in the raw JSON instance. Missing values and <code>null</code> are omitted. Empty strings, <code>false</code>, and <code>0</code> are projected when they are valid response values. Scalar arrays produce repeated RDF values; V1 assigns no semantic significance to array order.</p>
+<p>Projection MUST fail with a diagnostic rather than silently omit or rewrite a bound value when an IRI is invalid or a value requiring a local mapping is unmapped. Conformance is based on expanded JSON-LD or RDF-equivalent output, not JSON property order, formatting, or implementation-assigned blank-node labels.</p>
+<p>Local value-to-IRI mappings use exact equality of parsed JSON scalar type and value. Implementations MUST NOT coerce types, trim strings, fold case, or parse string values before matching. Consequently, <code>"1"</code> does not match <code>1</code>, and <code>"true"</code> does not match <code>true</code>; <code>1</code> and <code>1.0</code> are the same JSON number value. Mapping entries cannot target <code>null</code>, because missing values and <code>null</code> are omitted from projection.</p>
+</section>
+</section>
+<section id="normative-projection-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="normative-projection-algorithm">Normative projection algorithm</h2>
+<section id="preconditions-and-result" class="level3">
+<h3 class="anchored" data-anchor-id="preconditions-and-result">Preconditions and result</h3>
+<p>Projection requires:</p>
+<ol type="1">
+<li>a Core V1-conformant template package;</li>
+<li>a Semantic V1-valid <code>semantics</code> component;</li>
+<li>an object response that has already validated against <code>form.schema</code>; and</li>
+<li>an optional runtime <code>rootInstanceIri</code> that is an absolute IRI.</li>
+</ol>
+<p>For conforming input, the result is an expanded JSON-LD array containing one root node object. It contains no <code>@context</code>: predicates, classes, datatypes, and identified nodes use their full IRIs. Projection MUST NOT mutate the template or response.</p>
+<p>If <code>rootInstanceIri</code> is supplied, the root node receives it as <code>@id</code>. Otherwise the root is an unnamed blank node and the expanded object omits <code>@id</code>. If <code>semantics.root.classIri</code> is present, the root receives an <code>@type</code> array containing that class IRI.</p>
+</section>
+<section id="binding-traversal" class="level3">
+<h3 class="anchored" data-anchor-id="binding-traversal">Binding traversal</h3>
+<p>Bindings are processed in their array order. A binding without <code>parentNodePointer</code> emits its predicate from the root node. A binding with <code>parentNodePointer</code> emits from each response object projected by that exact parent <code>node</code> binding.</p>
+<p>The projector translates the binding’s schema field pointer into a response path:</p>
+<ul>
+<li>each <code>properties/&lt;name&gt;</code> step reads the object property <code>&lt;name&gt;</code>; and</li>
+<li>each <code>items</code> step visits every array member in response order.</li>
+</ul>
+<p>Local <code>$ref</code> traversal is completed during Semantic validation; <code>/definitions</code> never becomes part of the response path. For a child of an object-array node, the leading <code>items</code> step after the parent’s field pointer addresses the current array member and is not traversed a second time. This preserves the association between every nested response object and its own child values.</p>
+<p>A missing property or <code>null</code> value emits nothing. Empty strings, <code>false</code>, and <code>0</code> are values and MUST be emitted. An empty array emits no value for its predicate. Scalar-array and object-array members are processed in response order, but that order has no RDF meaning in V1.</p>
+</section>
+<section id="value-projection" class="level3">
+<h3 class="anchored" data-anchor-id="value-projection">Value projection</h3>
+<p>For each non-null value:</p>
+<ul>
+<li>A <code>literal</code> binding emits a JSON-LD value object. It contains <code>@value</code> and either <code>@language</code> or <code>@type</code>. A fixed language tag is normalized to lowercase. Otherwise the explicit datatype is used, or the default datatype is selected from the effective Core field type and format using the literal table above.</li>
+<li>A direct <code>iri</code> binding emits <code>{ "@id": value }</code> after confirming that the response string is an absolute IRI.</li>
+<li>A mapped <code>iri</code> binding performs exact JSON scalar matching and emits <code>{ "@id": mappedIri }</code>. It never falls back to interpreting an unmapped value as an IRI or literal.</li>
+<li>A <code>node</code> binding emits one related blank node for an object, or one related blank node for every object-array member. Its optional <code>classIri</code> becomes an <code>@type</code> array. Its child bindings are then projected into that same node.</li>
+</ul>
+<p>When multiple bindings use the same predicate from the same subject, their values are appended to one predicate array in binding order. Nested blank nodes do not receive generated identifiers in V1.</p>
+</section>
+<section id="failure-and-determinism" class="level3">
+<h3 class="anchored" data-anchor-id="failure-and-determinism">Failure and determinism</h3>
+<p>Projection is atomic. If any projection diagnostic is produced, no expanded JSON-LD result is returned; implementations MUST NOT return a silently partial graph. Response-value diagnostics use RFC 6901 pointers into the response. Runtime-option diagnostics use pointers into the projection options.</p>
+<p>For a fixed valid template, response, and root IRI, an implementation MUST produce the same RDF graph. The reference serialization additionally preserves binding order for properties and response-array order for values. Conformance comparison ignores JSON object-property order and implementation-assigned blank node labels.</p>
+</section>
+</section>
+<section id="exact-template-association-boundary" class="level2">
+<h2 class="anchored" data-anchor-id="exact-template-association-boundary">Exact-template association boundary</h2>
+<p>Every collected response MUST remain durably associated with the exact Core V1 template package used to collect it. That package already supplies <code>metadata.versionId</code>. Semantic V1 therefore does not copy <code>versionId</code> into the response, add it to the field-derived JSON-LD graph, or define a metadata- instance envelope. Response storage and export packaging are responsibilities of the collecting application.</p>
+</section>
+<section id="deferred-beyond-v1" class="level2">
+<h2 class="anchored" data-anchor-id="deferred-beyond-v1">Deferred beyond V1</h2>
+<p>Semantic V1 does not include:</p>
+<ul>
+<li>concept-scheme constraints that do not affect projection;</li>
+<li>expected classes for externally referenced IRI values;</li>
+<li>remote ontology verification or controlled-vocabulary membership checks;</li>
+<li>ontology lookup, browsing, registry, or provider integrations;</li>
+<li>multiple predicates for one field;</li>
+<li>conditional or branch-specific semantic mappings;</li>
+<li>calculated, concatenated, parsed, or otherwise transformed values;</li>
+<li>RDF lists or RDF ordering semantics;</li>
+<li>reverse conversion from JSON-LD into a STAPLE response;</li>
+<li>user-authored or remotely fetched JSON-LD contexts;</li>
+<li>stable identifiers for nested nodes derived from particular response fields;</li>
+<li>dynamic language selection from another response field;</li>
+<li>OWL reasoning, SHACL validation, ontology alignment, or inferred equivalence;</li>
+<li>reverse properties, named graphs, reification, RDF-star, or arbitrary RDF graph authoring;</li>
+<li>automatic migration of legacy <code>ontologyId</code> annotations; or</li>
+<li>JSON-LD describing the template package itself.</li>
+</ul>
+<p>Legacy <code>ontologyId</code> values MAY be preserved and presented as migration hints, but they do not establish Semantic V1 conformance and MUST NOT be converted without an exact, user-reviewed interpretation.</p>
+</section>
+<section id="validation-and-compatibility-independence" class="level2">
+<h2 class="anchored" data-anchor-id="validation-and-compatibility-independence">Validation and compatibility independence</h2>
+<p>Semantic V1 validation depends on successful Core V1 package, form-component, and cross-component validation. It does not depend on RJSF rendering, Form Studio authoring, or STAPLE deployment compatibility.</p>
+<pre class="text"><code>Core V1 conformance
+|-- Semantic V1 validation
+`-- application compatibility assessment
+
+Core V1 + Semantic V1 + valid metadata instance
+`-- JSON-LD projection</code></pre>
+<p>An application-compatibility failure MUST NOT prevent Semantic V1 validation or invalidate Semantic V1 conformance. Conversely, Semantic V1 conformance does not claim that a particular application can author, preserve, preview, or deploy the semantic component. These are separate, versioned capability assessments.</p>
+</section>
+<section id="validation-diagnostic-contract" class="level2">
+<h2 class="anchored" data-anchor-id="validation-diagnostic-contract">Validation diagnostic contract</h2>
+<p>A validation diagnostic contains <code>stage</code>, <code>code</code>, <code>pointer</code>, and a human-facing <code>message</code>. Consumers MUST use <code>code</code>, not <code>message</code>, for program logic. The <code>pointer</code> is an RFC 6901 pointer into the outer template package.</p>
+<p>The <code>semantic-schema</code> stage reports <code>SEMANTIC_COMPONENT_INVALID</code> for violations of the component JSON Schema. The <code>semantic-profile</code> stage uses these stable codes for cross-component rules:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Code family</th>
+<th>Codes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Validation prerequisite</td>
+<td><code>SEMANTIC_FORM_SCHEMA_REQUIRED</code></td>
+</tr>
+<tr class="even">
+<td>IRI</td>
+<td><code>SEMANTIC_IRI_INVALID</code></td>
+</tr>
+<tr class="odd">
+<td>Field resolution</td>
+<td><code>SEMANTIC_FIELD_POINTER_INVALID</code>, <code>SEMANTIC_FIELD_POINTER_UNRESOLVED</code>, <code>SEMANTIC_FIELD_POINTER_REF_CYCLE</code>, <code>SEMANTIC_FIELD_POINTER_DUPLICATE</code>, <code>SEMANTIC_FIELD_TYPE_UNRESOLVED</code></td>
+</tr>
+<tr class="even">
+<td>Binding compatibility</td>
+<td><code>SEMANTIC_BINDING_TYPE_INCOMPATIBLE</code>, <code>SEMANTIC_DATATYPE_INCOMPATIBLE</code>, <code>SEMANTIC_LANGUAGE_INVALID</code>, <code>SEMANTIC_LANGUAGE_INCOMPATIBLE</code></td>
+</tr>
+<tr class="odd">
+<td>Exact mappings</td>
+<td><code>SEMANTIC_MAPPING_VALUE_DUPLICATE</code>, <code>SEMANTIC_MAPPING_VALUE_TYPE</code>, <code>SEMANTIC_MAPPING_VALUE_NOT_ALLOWED</code>, <code>SEMANTIC_MAPPING_ENUM_UNCOVERED</code></td>
+</tr>
+<tr class="even">
+<td>Node ownership</td>
+<td><code>SEMANTIC_PARENT_POINTER_INVALID</code>, <code>SEMANTIC_PARENT_REQUIRED</code>, <code>SEMANTIC_PARENT_NOT_FOUND</code>, <code>SEMANTIC_PARENT_AMBIGUOUS</code>, <code>SEMANTIC_PARENT_NOT_NODE</code>, <code>SEMANTIC_PARENT_OUTSIDE_NODE</code>, <code>SEMANTIC_PARENT_NOT_NEAREST</code>, <code>SEMANTIC_PARENT_SELF</code>, <code>SEMANTIC_PARENT_CYCLE</code></td>
+</tr>
+</tbody>
+</table>
+<p>Projection uses the <code>semantic-projection</code> stage and these stable codes:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>PROJECTION_PRECONDITION_FAILED</code></td>
+<td>The template or response does not meet the projection preconditions.</td>
+</tr>
+<tr class="even">
+<td><code>PROJECTION_ROOT_IRI_INVALID</code></td>
+<td>The supplied root instance IRI is not absolute.</td>
+</tr>
+<tr class="odd">
+<td><code>PROJECTION_VALUE_TYPE_INVALID</code></td>
+<td>A bound response value has an incompatible runtime shape.</td>
+</tr>
+<tr class="even">
+<td><code>PROJECTION_LITERAL_DATATYPE_AMBIGUOUS</code></td>
+<td>No single deterministic default datatype can be selected.</td>
+</tr>
+<tr class="odd">
+<td><code>PROJECTION_IRI_INVALID</code></td>
+<td>A direct IRI response value is not an absolute IRI.</td>
+</tr>
+<tr class="even">
+<td><code>PROJECTION_MAPPING_MISSING</code></td>
+<td>A mapped binding has no exact mapping for the response value.</td>
+</tr>
+</tbody>
+</table>
+<p>Any projection diagnostic makes the projection result absent.</p>
+</section>
+<section id="normative-artifacts" class="level2">
+<h2 class="anchored" data-anchor-id="normative-artifacts">Normative artifacts</h2>
+<p>The examples-first milestone established the binding vocabulary encoded by the normative <a href="https://staplescience.com/schemas/marker-template/semantic/v1/semantics.schema.json">Semantic V1 component schema</a>. The first five non-normative scenarios are maintained in <a href="https://github.com/STAPLE-verse/marker-template-spec/tree/v1.0.0/examples/semantic/v1"><code>examples/semantic/v1/</code></a>. They cover the title, default date datatype, direct ORCID IRI, exact local value-to-IRI mapping, and repeated contributors through a local <code>$ref</code>.</p>
+<p>The optional TypeScript <a href="https://github.com/STAPLE-verse/marker-template-spec/blob/v1.0.0/implementations/typescript/src/semantic.ts">Semantic V1 validator</a> implements component-shape validation, absolute-IRI and field-pointer checks, deterministic local <code>$ref</code> traversal, effective field-type compatibility, exact mapping rules, and node ownership with stable diagnostics. Its behavior is exercised by the cross-component conformance tests.</p>
+<p>The optional TypeScript <a href="https://github.com/STAPLE-verse/marker-template-spec/blob/v1.0.0/implementations/typescript/src/projector.ts">Semantic V1 projector</a> implements the algorithm above. The design examples fix complete expected expanded JSON-LD graphs, while the projector conformance tests cover number, boolean, <code>false</code>, <code>0</code>, empty-string, missing, and <code>null</code> behavior; scalar arrays; inline nested objects; fixed languages; explicit datatypes; invalid response IRIs; unmapped values; and atomic failure.</p>
+<p>The same edge cases are published as implementation-independent <a href="https://github.com/STAPLE-verse/marker-template-spec/blob/v1.0.0/fixtures/semantic/v1/README.md">portable projection fixtures</a>. The optional local <code>npm run validate:jsonld</code> command checks their expected and projected graphs with an independent JSON-LD 1.1 processor.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2023-2024, Erin Buchanan, Marton Kovacs</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

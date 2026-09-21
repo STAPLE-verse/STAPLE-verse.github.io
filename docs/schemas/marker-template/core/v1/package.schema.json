@@ -1,0 +1,380 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://staplescience.com/schemas/marker-template/core/v1/package.schema.json",
+  "title": "MARKER Core V1 Template Package",
+  "description": "The outer package schema for MARKER Core V1. Embedded form schemas are validated separately as JSON Schema draft-07.",
+  "type": "object",
+  "required": ["conformsTo", "metadata", "form"],
+  "additionalProperties": false,
+  "properties": {
+    "conformsTo": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "contains": {
+        "const": "https://staplescience.com/profiles/marker-template/core/v1"
+      }
+    },
+    "metadata": {
+      "$ref": "#/$defs/templateMetadata"
+    },
+    "form": {
+      "$ref": "#/$defs/form"
+    },
+    "semantics": {
+      "type": "object",
+      "description": "Semantic V1 payload. Core reserves its location; the Semantic V1 specification owns its shape and behavior."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "type": "object",
+        "properties": {
+          "semantics": true
+        },
+        "required": ["semantics"]
+      },
+      "then": {
+        "type": "object",
+        "properties": {
+          "conformsTo": {
+            "type": "array",
+            "contains": {
+              "const": "https://staplescience.com/profiles/marker-template/semantic/v1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "type": "object",
+        "properties": {
+          "conformsTo": {
+            "type": "array",
+            "contains": {
+              "const": "https://staplescience.com/profiles/marker-template/semantic/v1"
+            }
+          }
+        },
+        "required": ["conformsTo"]
+      },
+      "then": {
+        "type": "object",
+        "properties": {
+          "semantics": true
+        },
+        "required": ["semantics"]
+      }
+    }
+  ],
+  "$defs": {
+    "templateMetadata": {
+      "type": "object",
+      "required": [
+        "familyId",
+        "versionId",
+        "version",
+        "status",
+        "resourceType",
+        "title",
+        "createdAt",
+        "updatedAt"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "familyId": {
+          "type": "string",
+          "format": "uri",
+          "description": "Stable identity of the template family."
+        },
+        "versionId": {
+          "type": "string",
+          "format": "uri",
+          "description": "Stable identity of the exact template version represented by this package."
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-facing version label, unique within the template family."
+        },
+        "status": {
+          "enum": ["draft", "published"]
+        },
+        "resourceType": {
+          "const": "MetadataTemplate"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "language": {
+          "type": "string",
+          "pattern": "^[A-Za-z]{2,8}(-[A-Za-z0-9]{1,8})*$"
+        },
+        "contributors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contributor"
+          }
+        },
+        "publisher": {
+          "$ref": "#/$defs/publisher"
+        },
+        "license": {
+          "$ref": "#/$defs/license"
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "publishedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "releaseNotes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "published"
+              }
+            },
+            "required": ["status"]
+          },
+          "then": {
+            "type": "object",
+            "required": [
+              "description",
+              "language",
+              "contributors",
+              "publisher",
+              "license",
+              "publishedAt"
+            ],
+            "properties": {
+              "description": true,
+              "language": true,
+              "publisher": true,
+              "license": true,
+              "publishedAt": true,
+              "version": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+              },
+              "contributors": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "$ref": "#/$defs/publishedContributor"
+                }
+              }
+            }
+          },
+          "else": {
+            "type": "object",
+            "properties": {
+              "publishedAt": false
+            }
+          }
+        }
+      ]
+    },
+    "contributor": {
+      "type": "object",
+      "required": ["name"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nameType": {
+          "enum": ["Personal", "Organizational"]
+        },
+        "givenName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "familyName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "roles": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "identifiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/agentIdentifier"
+          },
+          "uniqueItems": true
+        },
+        "affiliations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/affiliation"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "publishedContributor": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/contributor"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "roles": true
+          },
+          "required": ["roles"]
+        }
+      ]
+    },
+    "agentIdentifier": {
+      "type": "object",
+      "required": ["value", "scheme"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "format": "uri"
+        },
+        "scheme": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "affiliation": {
+      "type": "object",
+      "required": ["name"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "identifier": {
+          "type": "string",
+          "format": "uri"
+        },
+        "identifierScheme": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "dependentRequired": {
+        "identifier": ["identifierScheme"],
+        "identifierScheme": ["identifier"]
+      }
+    },
+    "publisher": {
+      "type": "object",
+      "required": ["name"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "identifier": {
+          "type": "string",
+          "format": "uri"
+        },
+        "identifierScheme": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "dependentRequired": {
+        "identifier": ["identifierScheme"],
+        "identifierScheme": ["identifier"]
+      }
+    },
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identifier": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uri": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "identifier": true
+          },
+          "required": ["identifier"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "uri": true
+          },
+          "required": ["uri"]
+        }
+      ]
+    },
+    "form": {
+      "type": "object",
+      "required": ["schema", "uiSchema"],
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "type": "object",
+          "description": "A JSON Schema draft-07 document conforming to the MARKER Core V1 Form Schema Profile."
+        },
+        "uiSchema": {
+          "type": "object",
+          "description": "An RJSF uiSchema conforming to the MARKER Core V1 UI Schema Profile."
+        }
+      }
+    }
+  }
+}

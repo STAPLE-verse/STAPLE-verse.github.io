@@ -19,7 +19,7 @@ STAPLE received funding from [NASA](https://www.nasa.gov/) through the [Open Sci
 knitr::include_graphics("pics/logo.png")
 ```
 
-The [Psychological Science Accelerator (PSA)](psysciacc.org) was an inspiration for STAPLE with development help from our members. They have agreed to help fund the user experience and user interface component to designing software, along with support for additional programming.
+The [Psychological Science Accelerator (PSA)](https://psysciacc.org/) was an inspiration for STAPLE with development help from our members. They have agreed to help fund the user experience and user interface component to designing software, along with support for additional programming.
 
 ### Harrisburg University
 
